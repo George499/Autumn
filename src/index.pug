@@ -6,14 +6,51 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    styles 
     title Portfolio | main page
   body
     .wrapper
       .maincontent
-        +image('content/user.jpg', 'user-pic')
-        +icon('link', 'link-class')
-        .icon-bg
-        .class-name
-          .class Первая попытка
-          .sibling Вторая попытка
+        section.main
+          div.container
+            header.header
+              a.logo(href='index.html') BA
+              
+              ul.navigation__list
+                li.navigation__item
+                  a.navigation__link(href='') Главная
+                li.navigation__item
+                  a.navigation__link(href='') Обо мне
+                li.navigation__item
+                  a.navigation__link(href='') Навыки
+                li.navigation__item
+                  a.navigation__link(href='') Работы
+                li.navigation__item
+                  a.navigation__link(href='') Отзывы
+                li.navigation__item
+                  a.navigation__link(href='') Связаться
+              
+              ul.social-contacts
+                li.social__item        
+                  +icon('insta', 'social__link')      
+                li.social__item
+                  +icon('vk', 'social__link')
+                li.social__item
+                  +icon('github', 'social__link')
+          div.main-desc
+            div.desc-cont
+              p.desc-text
+                | Личный сайт
+                br
+                | веб-разработчика
+              h1.myname
+                | Георгий
+                br
+                | Исаев      
+        section.about-me
+        section.skills
+        section.my-works
+        section.reviews
+        footer.footer
+        
         
