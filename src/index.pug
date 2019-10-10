@@ -15,7 +15,6 @@ html(lang="en")
           div.container
             header.header
               a.logo(href='index.html') BA
-              
               ul.navigation__list
                 li.navigation__item
                   a.navigation__link(href='') Главная
@@ -29,7 +28,6 @@ html(lang="en")
                   a.navigation__link(href='') Отзывы
                 li.navigation__item
                   a.navigation__link(href='') Связаться
-              
               ul.social-contacts
                 li.social__item        
                   +icon('insta', 'social__link')      
@@ -37,18 +35,67 @@ html(lang="en")
                   +icon('vk', 'social__link')
                 li.social__item
                   +icon('github', 'social__link')
-          div.main-desc
-            div.desc-cont
-              p.desc-text
-                | Личный сайт
-                br
-                | веб-разработчика
-              h1.myname
-                | Георгий
-                br
-                | Исаев      
+            div.main-desc
+              div.desc-cont
+                p.desc-text
+                  | Личный сайт
+                  br
+                  | веб-разработчика
+                h1.myname
+                  | Георгий
+                  br
+                  | Исаев
+            div.scroll
+              | Скролл
+              +icon('scroll', 'scroll-icon')
         section.about-me
+          div.container
+            div.about-me__desc
+              div.about-me__inner
+               div.about-me__left
+                 +image('content/user.jpg', 'user-pic')
+                 div.desc-list
+                   ul.questions
+                    li.questions__item
+                      | Проживаю:
+                    li.questions__item
+                      | Возраст:
+                    li.questions__item
+                      | Родился:
+                   ul.answers
+                     li.answer__item
+                       | Москва
+                     li.answer__item
+                       | 31 год
+                     li.answer__item
+                       | 19 августа 1988
+               div.about-me__right
+                 h2 Привет, меня зовут
+                 h1 Георгий Исаев
+                 p.text Я занимаюсь разработкой современных сайтов и приложений.
+                   br
+                   | Мне нравится делать интересные и современные проекты.
+                 p.text__comment Этот сайт я сделал в рамках обучения в Школе онлайн образования
+                   br
+                   | LoftSchool. Чуть позже я освежу в нём свой контент. А пока
+                   br
+                   | посмотрите, как тут всё классно и красиво!
+
+
         section.skills
+          div.hands
+            +image('content/Руки.png', 'hands-pic')
+          div.container
+            h1 Чем я могу быть полезен вам
+            h2 Этот сайт я сделал в рамках обучения в Школе онлайн образования
+               br
+               | LoftSchool. Чуть позже я освежу в нём свой контент. А пока
+               br
+               | посмотрите, как тут всё классно и красиво!
+            div.skills__charts
+
+
+
         section.my-works
         section.reviews
         footer.footer
