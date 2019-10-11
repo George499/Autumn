@@ -6,7 +6,10 @@ mixin icon(name, className)
 mixin image(path, className)
   img(src=require(`images/${path}`) class=className)
 
-mixin chart(className)
- svg(class=className viewbox="0 0 100 100" preserveAspectRatio="none")
-  circle(cx="50" cy="50" r="40" class="circle circle_under")
-  circle(cx="50" cy="50" r="40" class="circle circle_above")
+mixin chart(className, percentage)
+ 
+  svg(class=className viewbox="0 0 100 100" preserveAspectRatio="none")
+    circle(cx="50" cy="50" r="40" class="circle circle_under")
+    circle(cx="50" cy="50" r="40" class="circle circle_above" style=(`animation-delay: -${percentage}s`))
+  
+    
