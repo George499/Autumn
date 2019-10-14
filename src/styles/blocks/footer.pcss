@@ -1,0 +1,103 @@
+.footer {
+    height: 371px;
+    background-color: #222427;
+    display: flex;
+    align-items: center;
+}
+.footer__container {
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1480px;
+  width: 95%;
+}
+.footer__top {
+    display: flex;
+
+}
+.footer__year {
+    width: 170px;
+    font-size: 48px;
+font-weight: 600;
+color: rgba(255, 255, 255, .3);
+line-height: 30px;
+margin-right: 60px;
+}
+.footer__top {
+    
+    display: flex;
+    
+}
+.footer__name {
+    width: 141px;
+    margin-right: 141px;
+}
+.footer__my-name {
+    margin: 0 0 34px;
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+
+}
+.footer__right  {
+    display: flex;
+    flex-direction: column;
+    .navigation__list {
+        align-self: inherit;
+        margin-bottom: 70px;
+    }
+}
+.footer__text-socials {
+    width: 347px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 157px;
+}
+.footer__quote {
+    width: 473px;
+    display: flex;
+    flex-direction: column;
+}
+.footer__right__bottom {
+    display: flex;
+    flex-direction: row;
+}
+.footer__text {
+    margin-bottom: 26px;
+    width: 100%;
+}
+.footer__quote-author {
+    font-style: italic;
+
+}
+.social__item-footer {
+height: 50px;
+width: 50px;
+background-color: transparent;
+border: 1px solid #353e4e;
+border-radius: 50px;
+margin-right: 31px;
+cursor: pointer;
+
+&--insta {
+    background: svg-load('insta.svg', fill=black, width=35px, height=25px) no-repeat center center;
+&:hover {
+    background: svg-load('insta.svg', fill=white, width=35px, height=25px) no-repeat center center;;
+}
+}
+&--vk {
+    background: svg-load('vk.svg', fill=black, width=35px, height=25px) no-repeat center center;
+    &:hover {
+        background: svg-load('vk.svg', fill=white, width=35px, height=25px) no-repeat center center;;
+    }
+}
+&--github {
+    background: svg-load('github.svg', fill=black, width=35px, height=25px) no-repeat center center;
+    &:hover {
+        background: svg-load('github.svg', fill=white, width=35px, height=25px) no-repeat center center;;
+    }
+}
+
+}
