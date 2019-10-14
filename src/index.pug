@@ -14,7 +14,7 @@ html(lang="en")
         section.main
           div.container
             header.header
-              a.logo(href='index.html') BA
+              a.logo(href='index.html') ГИ
               ul.navigation__list
                 li.navigation__item
                   a.navigation__link(href='') Главная
@@ -53,7 +53,7 @@ html(lang="en")
             div.about-me__desc
               div.about-me__inner
                div.about-me__left
-                 +image('content/user.jpg', 'user-pic')
+                 +image('content/мое фото.jpg', 'user-pic')
                  div.desc-list
                    ul.questions
                     li.questions__item
@@ -85,36 +85,73 @@ html(lang="en")
         section.skills
           div.hands
             +image('content/Руки.png', 'hands-pic')
-          div.container
+          div.container.skills__container
             h1 Чем я могу быть полезен вам
-            h2 Этот сайт я сделал в рамках обучения в Школе онлайн образования
+            p Этот сайт я сделал в рамках обучения в Школе онлайн образования
                br
                | LoftSchool. Чуть позже я освежу в нём свой контент. А пока
                br
                | посмотрите, как тут всё классно и красиво!
-            div.skills__charts
-              .skill-name
-                h1.skills__name Front-end
-                .circles
-                  +chart('pie-chart', '25')
-                  +chart('pie-chart', '10')
-                  +chart('pie-chart', '75')
-                  +chart('pie-chart', '25')                  
-              .skill-name
-                h1.skills__name Workflow
-                .circles
-                  +chart('pie-chart', '10')
-                  +chart('pie-chart', '25')
-                  +chart('pie-chart', '50')
-                  +chart('pie-chart', '40')
-              
-             
-            
+          ul.user__skills
+            -
+              var skills = [
+                ['Front-end', ['HTML5', 'CSS3', 'Javascript', 'Jquery и Vue.js']],
+                ['Workflow', ['GIT', 'Terminal', 'Gulp', 'Webpack']],
+              ]
+            each item in skills
+              li.user-skills__item.skills-row
+                h3.skills-row__title #{item[0]}
+                ul.skills-row__list
 
-
-
+                  each skill in item[1]
+                    li.skills-row__item
+                      .skill
+                        +chart('pie-chart', '50')
+                        .skill__title #{skill}
         section.my-works
-        section.reviews
+          .container.my-works__container
+            h1.my-works__title Мои работы
+            .my-works__leftright
+              .works__left
+                .slider
+                  +image('content/2052.png', 'slider__fillpic')                
+                  .slider__preview
+                    ul.previews
+                      li.previews__item
+                        +image('content/2052.png', 'previews__pic')
+                      li.previews__item
+                        +image('content/2056.png', 'previews__pic')
+                      li.previews__item
+                        +image('content/2054.png', 'previews__pic')
+                      li.previews__item
+                        +image('content/2052.png', 'previews__pic')
+                  .slider__buttons
+                    .slider-button
+                      button.slider-buttons__item.slider-buttons__item--prev
+                        +icon('arrow-down', 'prev-icon')
+                      button.slider-buttons__item.slider-buttons__item--next
+                        +icon('arrow-down', 'next-icon')
+              .works__number 2 
+              .works__right
+                ul.works__tags
+                  - var tags = ['HTML', 'CSS', 'Javascript']
+                  each tag in tags
+                    li.tag #{tag}
+                      
+                .works__text
+                  h1.works__title Сайт школы образования
+                  .works__desc-text
+                    p.works__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                  a.iconed-link
+                    +icon('link', 'iconed-link__icon')
+                    .iconed-link__text Посмотреть сайт
+
+        section.feedback
+          section.reviews
+          section.form
+            .input
+              input(type="text").input__elem
+               
         footer.footer
         
         

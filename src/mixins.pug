@@ -11,5 +11,5 @@ mixin chart(className, percentage)
   svg(class=className viewbox="0 0 100 100" preserveAspectRatio="none")
     circle(cx="50" cy="50" r="40" class="circle circle_under")
     circle(cx="50" cy="50" r="40" class="circle circle_above" style=(`animation-delay: -${percentage}s`))
-  
-    
+
+
