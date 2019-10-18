@@ -1,5 +1,6 @@
 .my-works {
     height: 100vh;
+    
 }
 .my-works__title {
     color: black;
@@ -23,10 +24,15 @@ margin-right: 20px;
 height: 549px;
 width: 975px;
 position: relative;
+@include desktop {
+    width: 620px;
+    height: 350px;
+}
 }
 .previews {
     display: flex;
     flex-direction: row;
+
 }
 .slider__preview {
     position: absolute;
@@ -37,10 +43,27 @@ position: relative;
 height: 100px;
 width: 178px;
 cursor: pointer;
+position: relative;
 &:first-child {
 border: 3px solid #dc9322;
-};
-
+ }
+ &:hover:before {
+    content: "";
+   background: rgba(#5500f2, .6);
+   height: 100px;
+   width: 178px;
+   position: absolute;
+   top: 0;
+   left: 0
+}
+@include desktop {
+    width: 180px;
+    height: 100px;
+    &:last-child {
+        display: none;
+        }
+}
+ 
 }
 .previews__pic {
     min-width: 100%;
@@ -49,6 +72,10 @@ border: 3px solid #dc9322;
 height: 50px;
 width: 50px;
 background-color: #353e4e;
+&:hover {
+    background: #5500f2;
+    
+}
 
 }
 .slider-button {
@@ -84,9 +111,12 @@ cursor: pointer;
 &:last-child{
     margin-right: 0;  
 }
+&:hover {
+    background-color: rgba(#859ec2, .5)
+}
 }
 .works__number{
-font-size: 400px;
+font-size: 240px;
 color: #e6e6e6;
 display: flex;
 justify-content: center;
@@ -106,11 +136,15 @@ padding-bottom: 15px;
 }
 .iconed-link__text {
     color: #586ed3;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 .iconed-link {
     display: flex;
     flex-direction: row;
     align-items: center;
+    
 }
 .works__tags {
     display: flex;

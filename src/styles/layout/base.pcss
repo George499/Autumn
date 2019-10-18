@@ -1,5 +1,6 @@
 html {
   @include desktop {
+    
     font-size: 15px;
   }
   @include tablets {
@@ -25,7 +26,9 @@ body {
   overflow: hidden;
   min-height: 100%;
   position: relative;
-}
+  
+  }
+
 
 .container {
   margin: 0 auto;
@@ -33,6 +36,13 @@ body {
   width: 95%;
   // width: 1490px;
 
+@include desktop {
+  max-width: 1080px;
+}
+@include tablets {
+  max-width: 680px;
+  
+}
   @include phones {
     width: 85%;
   }
@@ -46,11 +56,13 @@ body {
 button {
   border: 0;
   cursor: pointer;
+  outline: none;
 }
 
 * {
   box-sizing: border-box;
 }
+
 
 ul {
   padding: 0;
@@ -101,3 +113,5 @@ img {
   max-width: 100%;
   max-height: 100%;
 }
+
+  

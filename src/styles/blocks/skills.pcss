@@ -5,11 +5,18 @@
     justify-content: center;    
     position: relative;
     background-blend-mode: multiply;
+    
 }
 .hands-pic {
     position: absolute;
     top: 128px;
     // filter: opacity(.);
+    @include desktop {
+        width: 393px;
+        height: 653px;
+        bottom: -60px;
+        top: inherit;
+    }
 }
 .user__skills {
     display: flex;
@@ -36,6 +43,9 @@
     font-weight: 600;
     line-height: 30px;
     }
+    @include desktop {
+        padding-left: 20%;
+    }
 }
 .user-skills__item {
     display: flex;
@@ -47,6 +57,9 @@
     display: flex;
     flex-direction: row;
     padding-right: 260px;
+    @include desktop {
+        padding-right: 85px; 
+    }
 }
 .circle {
     fill: transparent;

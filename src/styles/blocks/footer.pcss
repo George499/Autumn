@@ -3,6 +3,7 @@
     background-color: #222427;
     display: flex;
     align-items: center;
+    
 }
 .footer__container {
     display: flex;
@@ -12,10 +13,16 @@
     margin: 0 auto;
     max-width: 1480px;
   width: 95%;
+  @include desktop {
+    max-width: 1200px;
+  }
 }
 .footer__top {
     display: flex;
-
+    width: 30%;
+    @include desktop {
+        flex-direction: column;
+    }
 }
 .footer__year {
     width: 170px;
@@ -44,6 +51,7 @@ margin-right: 60px;
 .footer__right  {
     display: flex;
     flex-direction: column;
+    width: 65%;
     .navigation__list {
         align-self: inherit;
         margin-bottom: 70px;
@@ -84,19 +92,19 @@ cursor: pointer;
 &--insta {
     background: svg-load('insta.svg', fill=black, width=35px, height=25px) no-repeat center center;
 &:hover {
-    background: svg-load('insta.svg', fill=white, width=35px, height=25px) no-repeat center center;;
+    background: svg-load('insta.svg', fill=#ff9a00, width=35px, height=25px) no-repeat center center;;
 }
 }
 &--vk {
     background: svg-load('vk.svg', fill=black, width=35px, height=25px) no-repeat center center;
     &:hover {
-        background: svg-load('vk.svg', fill=white, width=35px, height=25px) no-repeat center center;;
+        background: svg-load('vk.svg', fill=#ff9a00, width=35px, height=25px) no-repeat center center;;
     }
 }
 &--github {
     background: svg-load('github.svg', fill=black, width=35px, height=25px) no-repeat center center;
     &:hover {
-        background: svg-load('github.svg', fill=white, width=35px, height=25px) no-repeat center center;;
+        background: svg-load('github.svg', fill=#ff9a00, width=35px, height=25px) no-repeat center center;;
     }
 }
 

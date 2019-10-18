@@ -35,6 +35,8 @@ html(lang="en")
                   +icon('vk', 'social__link')
                 li.social__item
                   +icon('github', 'social__link')
+              a.burger-menu(href="")
+                .burger-menu-link__bars            
             div.main-desc
               div.desc-cont
                 p.desc-text
@@ -45,8 +47,8 @@ html(lang="en")
                   | Георгий
                   br
                   | Исаев
-            div.scroll
-              | Скролл
+            button.scroll
+              p.scroll__text Скролл
               +icon('scroll', 'scroll-icon')
         section.about-me
           div.container
@@ -80,8 +82,6 @@ html(lang="en")
                    | LoftSchool. Чуть позже я освежу в нём свой контент. А пока
                    br
                    | посмотрите, как тут всё классно и красиво!
-
-
         section.skills
           div.hands
             +image('content/Руки.png', 'hands-pic')
@@ -145,7 +145,6 @@ html(lang="en")
                   a.iconed-link
                     +icon('link', 'iconed-link__icon')
                     .iconed-link__text Посмотреть сайт
-
         section.feedback
           .container.feedback__container
             section.reviews

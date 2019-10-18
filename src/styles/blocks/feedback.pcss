@@ -3,6 +3,7 @@
     position: relative;
     justify-content: center;
     height: 1375px;
+    
 }
 .form__input {
     background: none;
@@ -18,20 +19,33 @@
     font-size: 18px;
     font-weight: bold;  
     line-height: 30px;    
+    &:hover {
+        border-bottom: 1px solid #586ed3;
+    }
     
     &--textarea {
         padding-right: 40%;
         background: svg-load('message.svg', fill=rgba(255, 255, 255, .3), width=26px, height=30px) no-repeat center left;
+        &:hover {
+            background: svg-load('message.svg', fill=#586ed3, width=26px, height=30px) no-repeat center left;
+        }
     }
     &--name {
         background: svg-load('user.svg', fill=rgba(255, 255, 255, .3), width=26px, height=30px) no-repeat center left;
-    }
+    
+        &:hover {
+            background: svg-load('user.svg', fill=#586ed3, width=26px, height=30px) no-repeat center left;
+        }    }
     &--mail {
         background: svg-load('envelope.svg', fill=rgba(255, 255, 255, .3), width=26px, height=30px) no-repeat center left;
+        &:hover {
+            background: svg-load('envelope.svg', fill=#586ed3, width=26px, height=30px) no-repeat center left;
+        }
     }
     &::placeholder {
         color: white;
     }
+    
     
 }
 
@@ -93,21 +107,37 @@
     position: absolute;
     right: 0;
     top: -150px;
+    @include desktop {
+        width: 20%;
+        top: -100px
+    }
 }
 .leave-2 {
     position: absolute;
     right: 357px;
     top: 455px;
+    @include desktop {
+        width: 10%;
+        right: 200px
+    }
 }
 .leave-3 {
     position: absolute;
     right: 172px;
     top: 676px;
+    @include desktop {
+        width: 10%;
+        right: 120px;
+    }
 }
 .leave-4 {
     position: absolute;
     right: 172px;
     bottom: 146px;
+    @include desktop {
+        width: 15%;
+        right: 120px;
+    }
 }
 
 
