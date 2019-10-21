@@ -21,7 +21,8 @@ new Vue({
                 },
                 loop: true,
                 slidesPerView: 2,
-                slidesPerGroup: 2,         
+                slidesPerGroup: 2,
+                spaceBetween: 84,
                 
               }
         };
