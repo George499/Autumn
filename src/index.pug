@@ -166,8 +166,8 @@ html(lang="en")
                 .reviews__title
                   h1.form__title Что обо мне говорят
                   .reviews__scrolls
-                  button.reviews__scroll.reviews__scroll--left
-                  button.reviews__scroll.reviews__scroll--right
+                  button.reviews__scroll.reviews__scroll--left(slot="button-prev")
+                  button.reviews__scroll.reviews__scroll--right(slot="button-next")
                 swiper.reviews__slider(:options="swiperOptions" ref="mySwiper" id="reviews__slider")
                   swiper-slide.review__slide
                     .slide__top
