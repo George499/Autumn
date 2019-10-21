@@ -1,6 +1,9 @@
 .reviews {
     margin-bottom: 202px;
-    
+    @include tablets {
+        margin-bottom: 0;
+        height: 50%;
+    }
 }
 .reviews__scroll {
 height: 50px;
@@ -28,6 +31,10 @@ margin-right: 31px;
     &:last-child {
         margin-right: 0;
     }
+    @include tablets {
+        margin-right: 47px;
+        width: 50%;
+    }
 }
 .quote__icon {
     height: 63px;
@@ -46,6 +53,7 @@ border-radius: 75px
 .reviews__title {
     display: flex;
     flex-direction: row;
+    
 }
 .slide__top {
     display: flex;
@@ -64,6 +72,9 @@ align-items: center;
 .slide__img {
     margin-right: 31px;
     padding-left: 70px;
+    @include tablets {
+        padding-left: 30px;
+    }
 }
 .reviews__slider {
     
@@ -73,4 +84,9 @@ align-items: center;
 .reviewer__name {
     font-size: 18px;
     margin: 0;
+}
+.slide__name {
+    @include tablets {
+        width: 100%;
+    }
 }

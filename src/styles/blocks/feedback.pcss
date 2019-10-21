@@ -3,7 +3,21 @@
     position: relative;
     justify-content: center;
     height: 1375px;
+    @include tablets {
+         height: 100vh;
+    }
     
+}
+.form {
+    @include tablets {
+        height: 80%;
+    }
+}
+.form__column {
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+  }  
 }
 .form__input {
     background: none;
@@ -49,14 +63,12 @@
     
 }
 
-.form__block {
-    align-self: baseline;
-}
 .form__row {
     display: flex;
     margin-bottom: 41px;
 }
 .form__block {
+    align-self: baseline;
     width: 50%;  
     margin-right: 64px; 
     &:last-child {
@@ -65,6 +77,10 @@
     &--comment {
         width: 100%;
     }
+    @include tablets {
+        width: 100%;
+    }
+
 }
 .form__block-title {
     color: rgba(255, 255, 255, .3);
@@ -83,19 +99,35 @@
     &:hover {
         background: #d0731b
     }
+    @include tablets {
+        align-self: center;
+    }
 }
 .feedback__container {
     display: flex;
+    height: 100%;
+    @include tablets {
+        width: 760px;
+    }
     
 }
 .reviews__title {
     align-items: center;
     margin-bottom: 101px;
+    @include tablets {
+        margin-bottom: 61px;
+    }
 }
 .form__title {
     margin-right: 119px;
     &--bottom {
         margin-bottom: 97px;
+        @include tablets {
+            text-align: center;
+        }
+    }
+    @include tablets {
+     margin-right: 30px;   
     }
 }
 .reviews__slider {

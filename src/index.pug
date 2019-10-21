@@ -12,6 +12,19 @@ html(lang="en")
     .wrapper
       .maincontent
         section.main
+        
+          .layer(data-depth="0.2")
+            img(class="par-img" src="src/images/content/parralax/Train Bridge_0005_AST_Слой 7.jpg")
+          .layer(data-depth="0.4")
+            img(class="par-img" src="src/images/content/parralax/Train Bridge_0004_AST_Слой 7 копия.jpg")
+          .layer(data-depth="0.6")
+            img(class="par-img" src="src/images/content/parralax/Train Bridge_0003_AST_Слой 13.jpg")
+          .layer(data-depth="0.8")
+            img(class="par-img" src="src/images/content/parralax/Train Bridge_0002_AST_Группа 2.jpg")
+          .layer(data-depth="0.9")
+            img(class="par-img" src="src/images/content/parralax/Train Bridge_0001_AST_Прямоугольник 35 копия 4.jpg")
+          .layer(data-depth="1")
+            img(class="par-img" src="src/images/content/parralax/Train Bridge_0000_AST_Прямоугольник 35 копия.jpg")
           div.container
             header.header
               a.logo(href='index.html') ГИ
@@ -28,7 +41,7 @@ html(lang="en")
                   a.navigation__link(href='') Отзывы
                 li.navigation__item
                   a.navigation__link(href='') Связаться
-              ul.social-contacts
+              ul.social-contacts.social-contacts--header
                 li.social__item        
                   +icon('insta', 'social__link')      
                 li.social__item
@@ -131,7 +144,7 @@ html(lang="en")
                         +icon('arrow-down', 'prev-icon')
                       button.slider-buttons__item.slider-buttons__item--next
                         +icon('arrow-down', 'next-icon')
-              .works__number 2 
+                  .works__number 2 
               .works__right
                 ul.works__tags
                   - var tags = ['HTML', 'CSS', 'Javascript']
@@ -209,7 +222,7 @@ html(lang="en")
                 h1.footer__my-name Георгий Исаев 
                 p.footer__text Личный сайт веб-разработчика
             .footer__right              
-              ul.navigation__list
+              ul.navigation__list.navigation__list--footer
                 li.navigation__item
                   a.navigation__link(href='') Главная
                 li.navigation__item
@@ -225,15 +238,10 @@ html(lang="en")
               .footer__right__bottom
                 .footer__text-socials
                   p.footer__text Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
-                  ul.social-contacts
+                  ul.social-contacts.social-contacts--footer
                     li.social__item-footer.social__item-footer--insta     
                     li.social__item-footer.social__item-footer--vk     
                     li.social__item-footer.social__item-footer--github 
                 .footer__quote
                   p.footer__quote-par Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
                   h2.footer__quote-author Martin Golding
-              
-
-
-        
-        

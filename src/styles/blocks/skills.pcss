@@ -17,12 +17,20 @@
         bottom: -60px;
         top: inherit;
     }
+    @include desktop {
+        bottom: -130px;
+        left: 25%;
+        transform: rotate(-90deg);
+    }
 }
 .user__skills {
     display: flex;
     align-items: flex-end;
     height: 60%;
     flex-direction: column;
+    @include tablets {
+        align-items: center;
+    }
 }
 .pie-chart {
     height: 136px;
@@ -35,16 +43,31 @@
     align-items: baseline;
     padding-left: 30%;
     height: 40%;
+    width: 100%;
     h1 {
     font-size: 30px;
     text-align: left;
+    @include tablets {
+        width: 40%;
+    }
     }
     p {
     font-weight: 600;
     line-height: 30px;
+    @include desktop {        
+        text-align: center;
+    }
     }
     @include desktop {
         padding-left: 20%;
+    }
+    @include desktop {
+        padding-left: 0;
+        align-items: center;
+        justify-content: center;
+    }
+    @include tablets {
+        height: 30%;
     }
 }
 .user-skills__item {
@@ -59,6 +82,11 @@
     padding-right: 260px;
     @include desktop {
         padding-right: 85px; 
+
+    }
+    @include tablets {
+        padding-right: 0;
+        margin-bottom: 60px;
     }
 }
 .circle {
@@ -102,6 +130,10 @@
 }
 .skills-row__title {
     font-size: 24px;
+    @include tablets {
+        text-align: center;
+        margin-bottom: 34px;
+    }
 }
 .skills-row {
     display: flex;
@@ -112,6 +144,9 @@
     margin-right: 66px;
     &:last-child {
         margin-right: 0;
+    }
+    @include tablets {
+        margin-right: 31px;
     }
 }
 .skill__title {

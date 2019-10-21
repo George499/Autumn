@@ -2,6 +2,11 @@
     height: 100vh;
     
 }
+.my-works__container {
+    @include tablets {
+        justify-content: center;
+    }
+}
 .my-works__title {
     color: black;
     align-self: baseline;
@@ -16,14 +21,22 @@ margin-right: 20px;
 .my-works__leftright {
     display: flex;
     flex-direction: row;
+    @include tablets {
+        flex-direction: column;
+    }
 }
 .works__left {
-    flex: 1;
+    display: flex;
+    flex-direction: row;
+@include tablets {
+    margin-bottom: 60px;
+}
 }
 .slider {
 height: 549px;
 width: 975px;
 position: relative;
+
 @include desktop {
     width: 620px;
     height: 350px;
@@ -122,6 +135,11 @@ display: flex;
 justify-content: center;
 width: 10%;
 padding-bottom: 15px;
+position: absolute;
+@include tablets {
+    top: -70px;
+    right: -88px;  
+}
 }
 .works__title {
     color: black;
@@ -133,6 +151,10 @@ padding-bottom: 15px;
     margin-bottom: 46px;
     font-weight: 600;
     line-height: 30px;
+    @include tablets {
+        text-align: center;
+        margin-bottom: 15px;
+    }
 }
 .iconed-link__text {
     color: #586ed3;
@@ -144,9 +166,21 @@ padding-bottom: 15px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    
+    @include tablets {
+        justify-content: center;
+    }
 }
 .works__tags {
     display: flex;
     flex-direction: row;
+}
+.works__right {
+    @include tablets {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    align-self: center;
+    }
 }

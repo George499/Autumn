@@ -19,6 +19,9 @@
 }
 .about-me__right {
     width: 40%;
+    @include tablets {
+        width: 60%;
+    }
 
 }
 .about-me__left {
@@ -34,7 +37,7 @@
     
 }
 .text {
-    margin-bottom: 80px;
+    margin-bottom: 31px;
     line-height: 2
 }
 .text__comment {
@@ -48,6 +51,9 @@ width: 200px;
 border-radius: 200px;
 margin-bottom: 79px;
 align-self: center;
+@include tablets {
+    align-self: flex-start;
+}
 
 }
 .desc-list {
@@ -55,4 +61,7 @@ align-self: center;
 }
 .questions {
     margin-right: 82px;
+    @include tablets {
+        margin-right: 40px;
+    }
 }

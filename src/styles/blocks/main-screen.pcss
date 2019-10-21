@@ -1,9 +1,22 @@
 .main {
-    background: url(../images/content/параллакс.png) center / cover no-repeat;
+    // background: url(../images/content/параллакс.png) center / cover no-repeat;
     position: relative;
-    justify-content: center;
     height: 100vh;
+    width: 100%;
 }
+.parallax {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  width: 100%;
+  }
+
 .header {
     display: flex;
     flex-direction: row;
@@ -18,6 +31,15 @@
     align-self: center;
     @include tablets {
       display: none;
+    }
+    &--footer {
+      @include tablets {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 20px;
+        line-height: 40px;
+        margin-bottom: 0;
+      }
     }
 }
 .container {
@@ -60,9 +82,16 @@
   .social-contacts {
       display: flex;
       align-items: center;
-      @include tablets {
-        padding-left: 344px
+      &--header {
+        @include tablets {
+          padding-left: 244px;
+        }
       }
+      &--footer {
+      @include tablets {
+        padding-left: 0
+      }
+    }
 
   }
   .navigation__item {
