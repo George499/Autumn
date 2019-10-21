@@ -38,7 +38,8 @@ html(lang="en")
               a.burger-menu(href="")
                 .burger-menu-link__bars            
             div.main-desc
-              div.desc-cont
+              div.desc-cont(id='app')
+                h1
                 p.desc-text
                   | Личный сайт
                   br
@@ -153,9 +154,9 @@ html(lang="en")
                   h1.form__title Что обо мне говорят
                   .reviews__scrolls
                   button.reviews__scroll.reviews__scroll--left
-                  button.reviews__scroll
-                .reviews__slider
-                  .review__slide
+                  button.reviews__scroll.reviews__scroll--right
+                swiper.reviews__slider(:options="swiperOptions" ref="mySwiper" id="reviews__slider")
+                  swiper-slide.review__slide
                     .slide__top
                       +icon("quote", "quote__icon")
                       p.quote__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
@@ -165,7 +166,7 @@ html(lang="en")
                       .slide__name
                         h1.reviewer__name Ковальчук Дмитрий
                         .reviewer__position Основатель Loftschool 
-                  .review__slide
+                  swiper-slide.review__slide
                     .slide__top
                       +icon("quote", "quote__icon")
                       p.quote__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
