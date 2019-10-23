@@ -12,19 +12,19 @@ html(lang="en")
     .wrapper
       .maincontent
         section.main
-          .layer.layer--1(data-speed="0.2")
-            +image('content/1par.png', 'par-img')            
-          .layer.layer--2(data-speed="0.4")
-            +image('content/2par.png', 'par-img')            
-          .layer.layer--3(data-speed="0.6")
-            +image('content/3par.png', 'par-img')           
-          .layer.layer--4(data-speed="0.8")
-            +image('content/4par.png', 'par-img')           
-          .layer.layer--5(data-speed="0.9")
-            +image('content/5par.png', 'par-img')          
-          .layer.layer--6(data-speed="1")
-            +image('content/6par.png', 'par-img')            
-          div.container.main-container
+          .layer(data-speed="0.2")
+            +image('content/1par.png', 'par-img')
+          .layer(data-speed="0.4")
+            +image('content/2par.png', 'par-img')
+          .layer(data-speed="0.6")
+            +image('content/3par.png', 'par-img')
+          .layer(data-speed="0.8")
+            +image('content/4par.png', 'par-img')
+          .layer(data-speed="0.9")
+            +image('content/5par.png', 'par-img')
+          .layer(data-speed="1")
+            +image('content/6par.png', 'par-img')
+          div.container.main-container(data-speed="1")
             header.header
               a.logo(href='index.html') ГИ
               ul.navigation__list

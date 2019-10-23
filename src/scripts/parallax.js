@@ -1,22 +1,16 @@
-var parallax = (function () {
-    var bg = document.querySelectorAll(".main")
-    var layers = bg.children
-   
+const parallax = document.querySelector('.main')
+const layers = parallax.children;
 
-    return {
-        move: function (block, windowScroll, strafeAmount) {
-            var strafe = windowScroll / -strafeAmount + '%';
-            var transformString = 'translate3d(0,' + strafe + ', 0)';
+function moveLayers(wScroll) {
+Array.from(layers).forEach(layer => {
+    const divider = layer.dataset.speed;
+    const strafe = wScroll * divider;
 
-            var style = block.style;
-
-            style.transform = tranformString;
-            style.webkitTransform = tranformString;
-        },
-        init:function (wScroll) {
-            this.move(layers, wScroll, 45)
-        }
-    }
+    layer.style.transform = 'translateY(-${ strafe }%)';
 })
+}
 
-
+window.addEventListener('scroll', e => {
+    const wScroll = window.pageYOffset;
+    moveLayers(wScroll)
+})
