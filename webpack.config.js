@@ -124,7 +124,12 @@ module.exports = (env, argv) => {
         chunks: ["admin"]
       }),
       new SpriteLoaderPlugin({ plainSprite: true }),
-      new VueLoaderPlugin()
+      new VueLoaderPlugin(),
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery'
+      }),
     ],
     devtool: "#eval-source-map"
   };

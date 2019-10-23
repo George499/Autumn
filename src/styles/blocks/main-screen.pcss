@@ -2,19 +2,38 @@
     // background: url(../images/content/параллакс.png) center / cover no-repeat;
     position: relative;
     height: 100vh;
-    width: 100%;
+    
 }
-.parallax {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
+
 .layer {
   position: absolute;
   top: 0;
-  left: 0;
-  
+  left: 0; 
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  &--1{
+    top: 0;
+  }
+  &--2{
+    top: 260px;
+  }
+  &--3{
+    top: 300px;
+  }
+  &--4{
+    top: 660px;
+  }
+  &--5{
+    top: 740px;
+  }
+  &--6{
+    top: 900px;
+  }
+  }
+  .par-img {
+    
+    position: absolute;
   }
 
 .header {

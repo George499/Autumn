@@ -12,34 +12,19 @@ html(lang="en")
     .wrapper
       .maincontent
         section.main
-        
-          .layer(data-depth="0.2")
-<<<<<<< Updated upstream
-            img(class="par-img" src="src/images/content/parralax/Train Bridge_0005_AST_Слой 7.jpg")
-          .layer(data-depth="0.4")
-            img(class="par-img" src="src/images/content/parralax/Train Bridge_0004_AST_Слой 7 копия.jpg")
-          .layer(data-depth="0.6")
-            img(class="par-img" src="src/images/content/parralax/Train Bridge_0003_AST_Слой 13.jpg")
-          .layer(data-depth="0.8")
-            img(class="par-img" src="src/images/content/parralax/Train Bridge_0002_AST_Группа 2.jpg")
-          .layer(data-depth="0.9")
-            img(class="par-img" src="src/images/content/parralax/Train Bridge_0001_AST_Прямоугольник 35 копия 4.jpg")
-          .layer(data-depth="1")
-            img(class="par-img" src="src/images/content/parralax/Train Bridge_0000_AST_Прямоугольник 35 копия.jpg")
-=======
-            +image('content/parralax/Train-Bridge_0000_Прямоугольник-35-копия.png', 'par-img')            
-          .layer(data-depth="0.4")
-            +image('content/parralax/Train-Bridge_0001_Прямоугольник-35-копия-4.png', 'par-img')            
-          .layer(data-depth="0.6")
-            +image('content/parralax/Train-Bridge_0002_Группа-2.png', 'par-img')           
-          .layer(data-depth="0.8")
-            +image('content/parralax/Train-Bridge_0003_Слой-13.png', 'par-img')           
-          .layer(data-depth="0.9")
-            +image('content/parralax/Train-Bridge_0004_Слой-7-копия.png', 'par-img')          
-          .layer(data-depth="1")
-            +image('content/parralax/Train-Bridge_0005_Слой-7.png', 'par-img')            
->>>>>>> Stashed changes
-          div.container
+          .layer.layer--1(data-speed="0.2")
+            +image('content/1par.png', 'par-img')            
+          .layer.layer--2(data-speed="0.4")
+            +image('content/2par.png', 'par-img')            
+          .layer.layer--3(data-speed="0.6")
+            +image('content/3par.png', 'par-img')           
+          .layer.layer--4(data-speed="0.8")
+            +image('content/4par.png', 'par-img')           
+          .layer.layer--5(data-speed="0.9")
+            +image('content/5par.png', 'par-img')          
+          .layer.layer--6(data-speed="1")
+            +image('content/6par.png', 'par-img')            
+          div.container.main-container
             header.header
               a.logo(href='index.html') ГИ
               ul.navigation__list

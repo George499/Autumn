@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Swiper from 'swiper'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
-
+import Parallax from '../../node_modules/vue-parallaxy/dist/vue-parallaxy.js'
 
 
 new Vue({
@@ -28,4 +28,5 @@ new Vue({
         };
     },
 })
+
 
