@@ -6,10 +6,197 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    styles 
     title Portfolio | main page
   body
     .wrapper
       .maincontent
-        +image('content/user.jpg', 'user-pic')
-        +icon('link', 'link-class')
-        .icon-bg
+        section.main
+          .layer(data-speed="0.2")
+            +image('content/1par.png', 'par-img')
+          .layer(data-speed="0.4")
+            +image('content/2par.png', 'par-img')
+          .layer(data-speed="0.6")
+            +image('content/3par.png', 'par-img')
+          .layer(data-speed="0.8")
+            +image('content/4par.png', 'par-img')
+          .layer(data-speed="0.9")
+            +image('content/5par.png', 'par-img')
+          .layer(data-speed="1")
+            +image('content/6par.png', 'par-img')
+          div.container.main-container(data-speed="1")
+            header.header
+              a.logo(href='index.html') ГИ
+              ul.navigation__list
+                li.navigation__item
+                  a.navigation__link(href='') Главная
+                li.navigation__item
+                  a.navigation__link(href='') Обо мне
+                li.navigation__item
+                  a.navigation__link(href='') Навыки
+                li.navigation__item
+                  a.navigation__link(href='') Работы
+                li.navigation__item
+                  a.navigation__link(href='') Отзывы
+                li.navigation__item
+                  a.navigation__link(href='') Связаться
+              ul.social-contacts.social-contacts--header
+                li.social__item        
+                  +icon('insta', 'social__link')      
+                li.social__item
+                  +icon('vk', 'social__link')
+                li.social__item
+                  +icon('github', 'social__link')
+              a.burger-menu(href="")
+                .burger-menu-link__bars            
+            div.main-desc
+              div.desc-cont(id='app')
+                h1
+                p.desc-text
+                  | Личный сайт
+                  br
+                  | веб-разработчика
+                h1.myname
+                  | Георгий
+                  br
+                  | Исаев
+            button.scroll
+              p.scroll__text Скролл
+              +icon('scroll', 'scroll-icon')
+          .fullscreen-wrapper
+        section.about-me
+          div.container
+            div.about-me__desc
+              div.about-me__inner
+               div.about-me__left
+                 +image('content/мое фото.jpg', 'user-pic')
+                 div.desc-list
+                   ul.questions
+                    li.questions__item
+                      | Проживаю:
+                    li.questions__item
+                      | Возраст:
+                    li.questions__item
+                      | Родился:
+                   ul.answers
+                     li.answer__item
+                       | Москва
+                     li.answer__item
+                       | 31 год
+                     li.answer__item
+                       | 19 августа 1988
+               div.about-me__right
+                 h2 Привет, меня зовут
+                 h1 Георгий Исаев
+                 p.text Я занимаюсь разработкой современных сайтов и приложений.
+                   br
+                   | Мне нравится делать интересные и современные проекты.
+                 p.text__comment Этот сайт я сделал в рамках обучения в Школе онлайн образования
+                   br
+                   | LoftSchool. Чуть позже я освежу в нём свой контент. А пока
+                   br
+                   | посмотрите, как тут всё классно и красиво!
+        section.skills
+          div.hands
+            +image('content/Руки.png', 'hands-pic')
+          div.container.skills__container
+            h1 Чем я могу быть полезен вам
+            p Этот сайт я сделал в рамках обучения в Школе онлайн образования
+               br
+               | LoftSchool. Чуть позже я освежу в нём свой контент. А пока
+               br
+               | посмотрите, как тут всё классно и красиво!
+          #skills-component
+        section.my-works
+          .container.my-works__container
+            h1.my-works__title Мои работы
+            #slider-component
+        section.feedback
+          .container.feedback__container
+            section.reviews
+              .reviews__block
+                .reviews__title
+                  h1.form__title Что обо мне говорят
+                  .reviews__scrolls
+                  button.reviews__scroll.reviews__scroll--left(slot="button-prev")
+                  button.reviews__scroll.reviews__scroll--right(slot="button-next")
+                swiper.reviews__slider(:options="swiperOptions" ref="mySwiper" id="reviews__slider")
+                  swiper-slide.review__slide
+                    .slide__top
+                      +icon("quote", "quote__icon")
+                      p.quote__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                    .slide__bottom 
+                      .slide__img 
+                        +image('content/user.jpg', 'review__pic')
+                      .slide__name
+                        h1.reviewer__name Ковальчук Дмитрий
+                        .reviewer__position Основатель Loftschool 
+                  swiper-slide.review__slide
+                    .slide__top
+                      +icon("quote", "quote__icon")
+                      p.quote__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+                    .slide__bottom 
+                      .slide__img 
+                        +image('content/user.jpg', 'review__pic')
+                      .slide__name
+                        h1.reviewer__name Владимир Сабанцев
+                        .reviewer__position Преподаватель 
+            section.form            
+              .form__block
+                h1.form__title.form__title--bottom Связаться со мной
+                .form__inputs
+                  form(action="").form__elem
+                   .form__column
+                    .form__row
+                      label.form__block
+                        .form__block-title Введите ваше имя
+                        input.form__input.form__input--name(name="name" placeholder="Ковальчук Дмитрий" required)
+                        .error                                      
+                      label.form__block
+                        .form__block-title Введите ваш email
+                        input.form__input.form__input--mail(type="text" name="phone" placeholder="gi.32@mail.ru" required)
+                        .error
+
+                    .form__row
+                      label.form__block.form__block--comment
+                        .form__block-title Сообщение к письму    
+                        textarea.form__input.form__input--textarea(type="text" name="comment" placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса" required)
+                        .error 
+                    button.send-button ОТПРАВИТЬ
+          +image("content/leave-top.png", "leave-1")
+          +image("content/leave-2.png", "leave-2")
+          +image("content/leave-3.png", "leave-3")
+          +image("content/leave-4.png", "leave-4")
+        footer.footer
+          .footer__container
+            .footer__top
+              h1.footer__year &copy 2019
+              .footer__name 
+                h1.footer__my-name Георгий Исаев 
+                p.footer__text Личный сайт веб-разработчика
+            .footer__right              
+              ul.navigation__list.navigation__list--footer
+                li.navigation__item
+                  a.navigation__link(href='') Главная
+                li.navigation__item
+                  a.navigation__link(href='') Обо мне
+                li.navigation__item
+                  a.navigation__link(href='') Навыки
+                li.navigation__item
+                  a.navigation__link(href='') Работы
+                li.navigation__item
+                  a.navigation__link(href='') Отзывы
+                li.navigation__item
+                  a.navigation__link(href='') Связаться
+              .footer__right__bottom
+                .footer__text-socials
+                  p.footer__text Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
+                  ul.social-contacts.social-contacts--footer
+                    li.social__item-footer.social__item-footer--insta     
+                    li.social__item-footer.social__item-footer--vk     
+                    li.social__item-footer.social__item-footer--github 
+                .footer__quote
+                  p.footer__quote-par Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
+                  h2.footer__quote-author Martin Golding
+    include ./templates/entry.pug
+

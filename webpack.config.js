@@ -6,10 +6,11 @@ const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const Parallax = require('parallax-js')
 
 module.exports = (env, argv) => {
   const isProductionBuild = argv.mode === "production";
-  const publicPath = '/';
+  const publicPath = '../dist/';
 
   const pcss = {
     test: /\.(p|post|)css$/,
@@ -123,7 +124,12 @@ module.exports = (env, argv) => {
         chunks: ["admin"]
       }),
       new SpriteLoaderPlugin({ plainSprite: true }),
-      new VueLoaderPlugin()
+      new VueLoaderPlugin(),
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery'
+      }),
     ],
     devtool: "#eval-source-map"
   };

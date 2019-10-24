@@ -1,0 +1,175 @@
+.feedback {
+    background: url(../images/content/Фон.jpg) center / cover no-repeat;
+    position: relative;
+    justify-content: center;
+    height: 1375px;
+    @include tablets {
+         height: 100vh;
+    }
+    
+}
+.form {
+    @include tablets {
+        height: 80%;
+    }
+}
+.form__column {
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+  }  
+}
+.form__input {
+    background: none;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position: 7px 7px;
+    border: transparent;
+    border-bottom: 1px solid white;
+    padding: 8px 20px 8px 46px;
+    width: 100%;
+    color: white;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;  
+    line-height: 30px;    
+    &:hover {
+        border-bottom: 1px solid #586ed3;
+    }
+    
+    &--textarea {
+        padding-right: 40%;
+        background: svg-load('message.svg', fill=rgba(255, 255, 255, .3), width=26px, height=30px) no-repeat center left;
+        &:hover {
+            background: svg-load('message.svg', fill=#586ed3, width=26px, height=30px) no-repeat center left;
+        }
+    }
+    &--name {
+        background: svg-load('user.svg', fill=rgba(255, 255, 255, .3), width=26px, height=30px) no-repeat center left;
+    
+        &:hover {
+            background: svg-load('user.svg', fill=#586ed3, width=26px, height=30px) no-repeat center left;
+        }    }
+    &--mail {
+        background: svg-load('envelope.svg', fill=rgba(255, 255, 255, .3), width=26px, height=30px) no-repeat center left;
+        &:hover {
+            background: svg-load('envelope.svg', fill=#586ed3, width=26px, height=30px) no-repeat center left;
+        }
+    }
+    &::placeholder {
+        color: white;
+    }
+    
+    
+}
+
+.form__row {
+    display: flex;
+    margin-bottom: 41px;
+}
+.form__block {
+    align-self: baseline;
+    width: 50%;  
+    margin-right: 64px; 
+    &:last-child {
+        margin-right: 0;
+    }
+    &--comment {
+        width: 100%;
+    }
+    @include tablets {
+        width: 100%;
+    }
+
+}
+.form__block-title {
+    color: rgba(255, 255, 255, .3);
+    padding-left: 46px;
+    font-weight: 600;
+}
+.send-button {
+    height: 70px;
+    width: 40%;
+    background: linear-gradient(to top, #d0731b, #dc9322 100%);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;        
+    line-height: 48px;
+    text-transform: uppercase;
+    &:hover {
+        background: #d0731b
+    }
+    @include tablets {
+        align-self: center;
+    }
+}
+.feedback__container {
+    display: flex;
+    height: 100%;
+    @include tablets {
+        width: 760px;
+    }
+    
+}
+.reviews__title {
+    align-items: center;
+    margin-bottom: 101px;
+    @include tablets {
+        margin-bottom: 61px;
+    }
+}
+.form__title {
+    margin-right: 119px;
+    &--bottom {
+        margin-bottom: 97px;
+        @include tablets {
+            text-align: center;
+        }
+    }
+    @include tablets {
+     margin-right: 30px;   
+    }
+}
+.reviews__slider {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.leave-1 {
+    position: absolute;
+    right: 0;
+    top: -150px;
+    @include desktop {
+        width: 20%;
+        top: -100px
+    }
+}
+.leave-2 {
+    position: absolute;
+    right: 357px;
+    top: 455px;
+    @include desktop {
+        width: 10%;
+        right: 200px
+    }
+}
+.leave-3 {
+    position: absolute;
+    right: 172px;
+    top: 676px;
+    @include desktop {
+        width: 10%;
+        right: 120px;
+    }
+}
+.leave-4 {
+    position: absolute;
+    right: 172px;
+    bottom: 146px;
+    @include desktop {
+        width: 15%;
+        right: 120px;
+    }
+}
+
+

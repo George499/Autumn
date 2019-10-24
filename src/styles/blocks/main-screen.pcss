@@ -1,0 +1,274 @@
+.main {
+    // background: url(../images/content/параллакс.png) center / cover no-repeat;
+    position: relative;
+    height: 100vh;
+    
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0; 
+  width: 100%;
+  height: 100%;
+  will-change: transform;  
+  
+  &:nth-child(1) {
+    .par-img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &:nth-child(1) {
+    .par-img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &:nth-child(2) {
+    .par-img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      top: 260px;
+    }
+  }
+  &:nth-child(3) {
+    .par-img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      top: 300px;
+    }
+  }
+  &:nth-child(4) {
+    .par-img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      top: 710px;
+    }
+  }
+  &:nth-child(5) {
+    .par-img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      top: 900px;
+    }
+  }
+  &:nth-child(6) {
+    .par-img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      top: 1100px;
+    }
+  }
+}
+.par-img{
+  position: absolute;
+  }  
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.navigation__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    @include tablets {
+      display: none;
+    }
+    &--footer {
+      @include tablets {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 20px;
+        line-height: 40px;
+        margin-bottom: 0;
+      }
+    }
+}
+.container {
+    width: 1480px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;    
+    justify-content: center;
+    @include tablets{
+      justify-content: space-around;;
+    }
+  }
+
+.logo {
+    font-size: 36px;
+    &:hover {
+        color: #ff9a00;
+      }
+}
+.social__item {
+    padding-left: 40px;
+    &:first-child{
+    padding-left: 0; 
+    }
+}
+
+.social__link {
+    width: 25px;
+    height: 25px;
+    fill: black;
+    cursor: pointer;
+    &:hover {
+      fill: #ff9a00;
+    }
+    @include desktop {
+    fill: rgba(#fff, .7);
+    
+    }
+  }
+  .social-contacts {
+      display: flex;
+      align-items: center;
+      &--header {
+        @include tablets {
+          padding-left: 244px;
+        }
+      }
+      &--footer {
+      @include tablets {
+        padding-left: 0
+      }
+    }
+
+  }
+  .navigation__item {
+    margin-right: 60px;
+
+    &:last-child{
+    margin-right: 0; 
+    }
+    &:hover {
+        color: #fff
+    }
+  }
+  .myname {
+      padding-left: 90px;
+      font-size: 72px;
+      text-align: start;
+      line-height: 60px;
+      color: rgba(#fff, 0.9);
+      
+  }
+  .desc-text {
+      text-align: end;
+      align-self: start;
+      @include tablets {
+        align-self: center;
+        text-align: center;
+      }
+
+  }
+  .main-desc {
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include tablets {
+      align-items: baseline;
+    }
+  }
+  .desc-cont {
+    height: 112px;
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      @include tablets {
+        flex-direction: column;
+        
+      }
+  }
+  .scroll {
+      background: transparent;
+      border: none;
+      font-size: 18px;
+      font-weight: 600;
+      height: 10%;
+      width: 10%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      align-self: center;
+&:hover {
+  color: #ff9a00;
+  .scroll-icon {
+    fill: #ff9a00
+  }
+}      
+@include tablets {
+  display: none;
+}
+}
+  .scroll-icon {
+        
+    height: 30px;    
+    cursor: pointer;
+    fill: #ffffff;
+  }
+  .burger-menu {
+    vertical-align: middle;
+	position: relative;
+	height: 22px;
+	align-items: center;
+    margin-left: 30px;
+    align-self: center;
+    display: none;
+    background: none;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    @include tablets {
+        display:  inline-flex;
+       
+    }
+    
+
+}
+
+.burger-menu-link__bars {
+  
+    &, &:before, &:after {
+        background: #fff;
+        width: 24px;
+        height: 5px;
+        border-radius: 3px;   
+             
+    }
+    &:before, &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        
+    }
+    &:before {
+        top: 0;
+    }
+    &:after {
+        bottom: 0;
+    }
+    
+}
+.burger-menu-link__bars, 
+.burger-menu-link__bars:after, 
+.burger-menu-link__bars:before {
+  &:hover {
+    background: #ff9a00;
+  }
+}
