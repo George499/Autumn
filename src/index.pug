@@ -109,40 +109,7 @@ html(lang="en")
         section.my-works
           .container.my-works__container
             h1.my-works__title Мои работы
-            .my-works__leftright
-              .works__left
-                .slider
-                  +image('content/2052.png', 'slider__fillpic')                
-                  .slider__preview
-                    ul.previews
-                      li.previews__item
-                        +image('content/2052.png', 'previews__pic')
-                      li.previews__item
-                        +image('content/2056.png', 'previews__pic')
-                      li.previews__item
-                        +image('content/2054.png', 'previews__pic')
-                      li.previews__item
-                        +image('content/2052.png', 'previews__pic')
-                  .slider__buttons
-                    .slider-button
-                      button.slider-buttons__item.slider-buttons__item--prev
-                        +icon('arrow-down', 'prev-icon')
-                      button.slider-buttons__item.slider-buttons__item--next
-                        +icon('arrow-down', 'next-icon')
-                  .works__number 2 
-              .works__right
-                ul.works__tags
-                  - var tags = ['HTML', 'CSS', 'Javascript']
-                  each tag in tags
-                    li.tag #{tag}
-                      
-                .works__text
-                  h1.works__title Сайт школы образования
-                  .works__desc-text
-                    p.works__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-                  a.iconed-link
-                    +icon('link', 'iconed-link__icon')
-                    .iconed-link__text Посмотреть сайт
+            #slider-component
         section.feedback
           .container.feedback__container
             section.reviews

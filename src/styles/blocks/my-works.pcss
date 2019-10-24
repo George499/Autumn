@@ -33,8 +33,9 @@ margin-right: 20px;
 }
 }
 .slider {
-height: 549px;
-width: 975px;
+height: 100%;
+width: 100%
+;
 position: relative;
 
 @include desktop {
@@ -57,14 +58,14 @@ height: 100px;
 width: 178px;
 cursor: pointer;
 position: relative;
-&:first-child {
-border: 3px solid #dc9322;
- }
- &:hover:before {
+
+&.active:before, &:hover::before {
     content: "";
-   background: rgba(#5500f2, .6);
-   height: 100px;
-   width: 178px;
+   background: rgba(#5500f2, .2);
+   outline: 2px solid #dc9322;
+   height: 100%;
+   z-index: 1000;
+   width: 100%;
    position: absolute;
    top: 0;
    left: 0
