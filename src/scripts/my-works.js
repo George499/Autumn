@@ -99,6 +99,9 @@ new Vue({
           this.currentIndex--;
           break;
       }
+    },
+    prevSlide(currentWork) {
+      console.log(currentWork)
     }
   },
   created() {
