@@ -4,6 +4,7 @@ script(type="text/x-template")#slider-container
         display(
             :works="works"
             :current-work="currentWork"
+            :current-index="currentIndex"
             @slide="handleSlide"
         )
         info(
@@ -11,7 +12,7 @@ script(type="text/x-template")#slider-container
         )
 
 script(type="text/x-template")#slider-display
-    .works__left
+    .works__left(:data-slide="currentIndex + 1")    
         .slider
             img(:src="currentWork.photo").slider__fillpic
             thumbs(
