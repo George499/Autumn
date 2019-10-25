@@ -100,8 +100,11 @@ new Vue({
           break;
       }
     },
-    prevSlide(currentWork) {
-      console.log(currentWork)
+    prevSlide(reqSlide) {
+
+    this.currentIndex = reqSlide - 1
+    
+      
     }
   },
   created() {
