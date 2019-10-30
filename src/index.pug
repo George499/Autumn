@@ -144,6 +144,16 @@ html(lang="en")
                       .slide__name
                         h1.reviewer__name Владимир Сабанцев
                         .reviewer__position Преподаватель 
+                  swiper-slide.review__slide
+                    .slide__top
+                      +icon("quote", "quote__icon")
+                      p.quote__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+                    .slide__bottom 
+                      .slide__img 
+                        +image('content/user.jpg', 'review__pic')
+                      .slide__name
+                        h1.reviewer__name Владимир Сабанцев
+                        .reviewer__position Преподаватель 
             section.form            
               .form__block
                 h1.form__title.form__title--bottom Связаться со мной
@@ -194,13 +204,10 @@ html(lang="en")
               .footer__right__bottom
                 .footer__text-socials
                   p.footer__text Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
-                  ul.social-contacts.social-contacts--footer
-                    li.social__item-footer.social__item-footer--insta
-                      a(href="http://www.instagram.com")
-                    li.social__item-footer.social__item-footer--vk
-                      a(href="http://www.vk.com")
-                    li.social__item-footer.social__item-footer--github
-                      a(href="http://www.github.com")
+                  .social-contacts.social-contacts--footer
+                    a(href="http://www.instagram.com").social__item-footer.social__item-footer--insta                     
+                    a(href="http://www.vk.com").social__item-footer.social__item-footer--vk                      
+                    a(href="http://www.github.com").social__item-footer.social__item-footer--github                      
                 .footer__quote
                   p.footer__quote-par Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
                   h2.footer__quote-author Martin Golding

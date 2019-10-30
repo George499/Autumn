@@ -63,13 +63,15 @@ new Vue({
             reviews: [],
             swiperOptions: {
                 navigation: {
-                    nextEl: '.reviews__scroll--left',
-                    prevEl: '.reviews__scroll--right',
+                    nextEl: '.reviews__scroll--right',
+                    prevEl: '.reviews__scroll--left',
+                    
                   },
-                  loop: true,
+                  loop: false,
                   slidesPerView: 2,
                   slidesPerGroup: 2
             }
         };
-    },    
+    }, 
+    
 })

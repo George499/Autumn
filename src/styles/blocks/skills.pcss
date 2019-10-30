@@ -9,8 +9,9 @@
 }
 .hands-pic {
     position: absolute;
-    top: 128px;
-    // filter: opacity(.);
+    top: 280px;
+    width: 30%;  
+    
     @include desktop {
         width: 393px;
         height: 653px;
@@ -28,8 +29,13 @@
     margin-left: 40%;
     height: 60%;
     flex-direction: column;
+    @include desktop {
+      margin: 0 auto;
+      align-items: center;
+    }
     @include tablets {
         align-items: center;
+        
     }
 }
 
