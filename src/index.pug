@@ -41,14 +41,17 @@ html(lang="en")
                 li.navigation__item
                   a.navigation__link(href='') Связаться
               ul.social-contacts.social-contacts--header
-                li.social__item        
-                  +icon('insta', 'social__link')      
                 li.social__item
-                  +icon('vk', 'social__link')
+                  a(href="http://www.instagram.com")
+                    +icon('insta', 'social__link')
                 li.social__item
-                  +icon('github', 'social__link')
+                  a(href="http://www.vk.com")
+                    +icon('vk', 'social__link')
+                li.social__item
+                  a(href="http://www.github.com")
+                    +icon('github', 'social__link')
               a.burger-menu(href="")
-                .burger-menu-link__bars            
+                .burger-menu-link__bars
             div.main-desc
               div.desc-cont(id='app')
                 h1
@@ -192,9 +195,12 @@ html(lang="en")
                 .footer__text-socials
                   p.footer__text Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
                   ul.social-contacts.social-contacts--footer
-                    li.social__item-footer.social__item-footer--insta     
-                    li.social__item-footer.social__item-footer--vk     
-                    li.social__item-footer.social__item-footer--github 
+                    li.social__item-footer.social__item-footer--insta
+                      a(href="http://www.instagram.com")
+                    li.social__item-footer.social__item-footer--vk
+                      a(href="http://www.vk.com")
+                    li.social__item-footer.social__item-footer--github
+                      a(href="http://www.github.com")
                 .footer__quote
                   p.footer__quote-par Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
                   h2.footer__quote-author Martin Golding
