@@ -1,0 +1,73 @@
+.aboutme-list {
+    position: relative;
+    height: 100%;
+    
+}
+.aboutme-content__list {
+font-family: 'Open Sans', Helvetica, sans-serif;    
+font-size: 16px;
+font-weight: 600;
+color: #414c63;
+padding: 30px 30px 30px 30px;
+border: none;
+outline: none;
+width: 50%;
+display: grid;
+
+
+}
+.aboutme-list__item {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+}
+.aboutme-list__footer {
+font-family: 'Open Sans', Helvetica, sans-serif;    
+
+
+color: rgba(#414c63, .7);
+padding: 30px 30px 30px 30px;
+border: none;
+outline: none;
+width: 50%;
+position: absolute;
+bottom: 34px;
+right: 31px;
+
+
+}
+.aboutme-list__footer__content {
+    display: flex;
+    align-items: center;
+    
+}
+.new-skill {
+    flex: 3;
+}
+.skill-percent {
+    flex: 1;
+}
+.add-plus {
+    flex: 1;
+}
+
+.add-plus__img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #006aed 0%, #3f35cb 100%);
+    position: relative;
+    margin-right: 14px;
+    display: flex;
+
+&:before {
+        position: absolute;
+        content: "+";
+        font-size: 30px;
+        color: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+    }
+    }
+    

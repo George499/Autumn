@@ -1,0 +1,36 @@
+.admin-nav{
+height: 77px;
+display: flex;
+align-items: center;
+background-color: #ffffff;
+position: relative;
+width: 100%;
+}
+.admin-nav-list {
+    display: flex;
+    flex-direction: raw;
+    color: #414c63;
+    padding-left: 88px;
+    
+}
+.admin-nav-list__item {
+    margin-right: 58px;
+    cursor: pointer;
+    &:last-child {
+        margin-right: 0;
+    }
+    &--active {
+        font-weight: bold;
+        color: #383bcf;
+        &:before {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 110px;
+        border-bottom: 2px solid #383bcf;
+        margin-left: -22px;
+        bottom: 0;
+            }
+    }
+    
+}
