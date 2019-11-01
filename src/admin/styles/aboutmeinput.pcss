@@ -1,0 +1,65 @@
+
+button{
+        
+    border: none;
+}
+.input {
+    font-family: 'Open Sans', Helvetica, sans-serif;    
+    font-size: 18px;
+    font-weight: 600;
+    color: #414c63;
+    padding: 30px 30px 30px 30px;
+    border: none;
+    outline: none;
+    width: 50%;
+    flex: 8;  
+    
+    }
+    .aboutme-input-wrap {
+        padding-left: 5px;
+        display: flex;
+        align-items: center;        
+        position: relative;
+        &:after {        
+            content: "";
+            bottom: 15px;
+            left: 35px;        
+            position: absolute;
+            background:  rgba(black, .4);
+            height: 2px;
+            width: 40%;
+        }
+    }
+    
+    .aboutme-input {
+        padding-left: 5px;        
+        align-items: center;
+        position: relative;
+       &:after {
+           position: absolute;
+           content: "";
+           height: 1px;
+           bottom: 0;
+           background: rgba(#1f232d, .1);
+           width: 93%;
+           margin-left: 20px;
+
+       }
+    }
+    .tick {
+     background: svg-load('../../images/icons/tick.svg', fill=#00d70a, width=15px, height=12px) no-repeat center center;   
+     height: 12px;
+     width: 15px;
+     cursor: pointer;
+     flex: 1;
+     
+     
+    }
+    .cross {
+     background: svg-load('../../images/icons/tick.svg', fill=#bf2929, width=15px, height=12px) no-repeat center center;   
+     height: 12px;
+     width: 15px;
+     flex: 1;
+     cursor: pointer;
+     
+    }

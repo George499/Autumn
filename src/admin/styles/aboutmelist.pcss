@@ -8,17 +8,19 @@ font-family: 'Open Sans', Helvetica, sans-serif;
 font-size: 16px;
 font-weight: 600;
 color: #414c63;
-padding: 30px 30px 30px 30px;
+padding-left: 30px;
 border: none;
 outline: none;
-width: 50%;
-display: grid;
+
+display: flex;
 
 
 }
 .aboutme-list__item {
-    display: grid;
-    grid-template-columns: 3fr 1fr 1fr;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 30px 0px 30px 10px;
 }
 .aboutme-list__footer {
 font-family: 'Open Sans', Helvetica, sans-serif;    
@@ -39,12 +41,44 @@ right: 31px;
     display: flex;
     align-items: center;
     
+    
+    
 }
 .new-skill {
     flex: 3;
+    border: none;
+    outline: none;
+    
 }
 .skill-percent {
     flex: 1;
+    border: none;
+    outline: none;  
+}
+.new-skill__input {
+position: relative;
+&:after {
+    content: "";
+    bottom: -10px;
+    left: -10px;
+    
+    position: absolute;
+    background:  black;
+    height: 1px;
+    width: 80%;
+}
+}
+.skill-percent__input{
+    position: relative;
+&:after {
+    content: "";
+    bottom: -10px;
+    left: -10px;
+    position: absolute;
+    background:  black;
+    height: 1px;
+    width: 80%;
+}
 }
 .add-plus {
     flex: 1;
@@ -71,3 +105,32 @@ right: 31px;
     }
     }
     
+    .skill-icon-pen {
+    background: svg-load('../../images/icons/trash.svg', fill=#414c63, width=15px, height=12px) no-repeat center center;   
+     height: 12px;
+     width: 15px;
+     cursor: pointer;
+     flex: 2;
+     
+    }
+    .skill-icon-trash {
+        background: svg-load('../../images/icons/trash.svg', fill=#414c63, width=15px, height=12px) no-repeat center center;   
+        height: 12px;
+        width: 15px;
+        cursor: pointer; 
+        flex: 2;
+    }
+    .item-skill__percent {
+        flex: 3;
+        display: flex;
+
+        
+    }
+    
+    .item-skill__icons {
+        display: flex;
+        flex: 2;
+    }
+    .skill-name {
+        flex: 10;
+    }
