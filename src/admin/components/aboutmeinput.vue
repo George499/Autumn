@@ -6,8 +6,9 @@
                 placeholder="Название новой группы"
                 autofocus
             ).input
-            button.tick(type='button')
-            button.cross(type='button')
+            .buttons
+                button.tick(type='button')
+                button.cross(type='button')
 </template>
 <style lang="pcss" scoped src='../styles/aboutmeinput.pcss'>
 

@@ -3,9 +3,9 @@
     adminheader
     navigation
     aboutme
-    aboutmeadd
+    aboutmeadd    
     works
-    worksadd
+    worksadd    
     comments
     commentsadd
 </template>
@@ -45,6 +45,10 @@ export default {
 
 <style lang="pcss">
 
+@import "normalize.css";
+@import "../styles/mixins.pcss";
+@import "../styles/layout/base.pcss";
+
 html, body {
   height: 100%; 
 }
@@ -67,6 +71,9 @@ body {
       align-items: center;
       height: 100%;
   
+  }
+  h1 {
+    color: #414c63;  
   }
 ul {
 margin: 0;

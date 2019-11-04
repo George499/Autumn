@@ -1,10 +1,14 @@
 .aboutme-list {
-    position: relative;
+    
     height: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
     
 }
 .aboutme-content__list {
-font-family: 'Open Sans', Helvetica, sans-serif;    
+  
 font-size: 16px;
 font-weight: 600;
 color: #414c63;
@@ -23,23 +27,20 @@ display: flex;
     padding: 30px 0px 30px 10px;
 }
 .aboutme-list__footer {
-font-family: 'Open Sans', Helvetica, sans-serif;    
-
-
 color: rgba(#414c63, .7);
 padding: 30px 30px 30px 30px;
 border: none;
 outline: none;
-width: 50%;
-position: absolute;
 bottom: 34px;
 right: 31px;
-
-
+display: flex;
+justify-content: flex-end;
 }
 .aboutme-list__footer__content {
     display: flex;
     align-items: center;
+    width: 95%;
+    justify-content: flex-end;
     
     
     
@@ -54,9 +55,11 @@ right: 31px;
     flex: 1;
     border: none;
     outline: none;  
+    
 }
 .new-skill__input {
 position: relative;
+width: 40%;
 &:after {
     content: "";
     bottom: -10px;
@@ -70,6 +73,7 @@ position: relative;
 }
 .skill-percent__input{
     position: relative;
+    width: 20%;
 &:after {
     content: "";
     bottom: -10px;
@@ -81,7 +85,8 @@ position: relative;
 }
 }
 .add-plus {
-    flex: 1;
+    
+    width: 10%;
 }
 
 .add-plus__img{
@@ -106,7 +111,7 @@ position: relative;
     }
     
     .skill-icon-pen {
-    background: svg-load('../../images/icons/trash.svg', fill=#414c63, width=15px, height=12px) no-repeat center center;   
+    background: svg-load('../../images/icons/pen.svg', fill=#414c63, width=15px, height=12px) no-repeat center center;   
      height: 12px;
      width: 15px;
      cursor: pointer;
@@ -123,13 +128,14 @@ position: relative;
     .item-skill__percent {
         flex: 3;
         display: flex;
+        justify-content: space-evenly
 
         
     }
     
     .item-skill__icons {
         display: flex;
-        flex: 2;
+        flex: 3;
     }
     .skill-name {
         flex: 10;

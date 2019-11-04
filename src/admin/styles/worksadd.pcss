@@ -1,0 +1,104 @@
+.works-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 556px 556px;
+    grid-gap: 30px 30px;
+    width: 100%;
+    padding-top: 30px;
+    
+}
+.work-item {
+    box-shadow: inset -0.3125rem -0.3125rem 0.3125rem rgba(0,0,0,.06);
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    &--add {
+        background: linear-gradient(90deg, #006aed 0%, #3f35cb 100%);
+        justify-content: center;
+    }
+    &--chosen {
+        filter: opacity(.4);
+    }
+}
+
+.work-add-circle {
+height: 150px;
+width: 150px;
+position: relative;
+border: 2px solid #ffffff;
+border-radius: 150px;
+margin-bottom: 30px;
+cursor: pointer;
+&:before {
+    content: "+";
+    font-size: 72px;
+    font-weight: 300;
+    line-height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+}
+.work-add-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    width: 30%;
+}
+.work-item__desc {
+padding: 0 30px;
+}
+.work-item__img {
+  width: 100%;
+  height: 45%;
+}
+.work-item__title {
+font-size: 18px;
+font-weight: bold;
+color: #414c63;
+margin-bottom: 20px;
+}
+.work-item__text {
+    color: #414c63;
+    margin-bottom: 20px;
+}
+.work-item__link {
+    color: #383bcf;
+    text-decoration: none;
+    margin-bottom: 40px;
+}
+.work-item__button {
+    height: 17px;
+    width: 96px;
+    background: transparent;
+    display: flex;
+    color: rgba(#414c63, .5);
+    
+}
+.btn-edit-text {
+margin-right: 11px;    
+}
+.btn-edit-img {
+    background: svg-load('pen.svg', fill=#383bcf, width=17px, height=17px) no-repeat center center ;
+    min-width: 17px;
+    min-height: 17px;
+    &--del {
+        background: svg-load('cross.svg', fill=#c92e2e, width=17px, height=17px) no-repeat center center ;   
+    }
+
+}
+
+.work-item__buttons {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
