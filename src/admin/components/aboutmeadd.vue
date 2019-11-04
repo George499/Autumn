@@ -13,7 +13,6 @@
                     aboutmeInput
                     aboutmeList
                     aboutmeListFooter
-
 </template>
 <script>
 
@@ -31,5 +30,5 @@ export default {
 }
 </script>
 <style lang='pcss' scoped src='../styles/aboutmeadd.pcss'>
-@import "../styles/mixins.pcss";
+
 </style>

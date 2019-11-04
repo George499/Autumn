@@ -11,8 +11,6 @@
 </template>
 
 <script>
-
-
 import adminheader from './components/adminheader.vue';
 import navigation from './components/navigation.vue';
 import aboutme from './components/aboutme.vue';
