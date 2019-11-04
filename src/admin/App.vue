@@ -11,14 +11,14 @@
 </template>
 
 <script>
-import adminheader from './components/adminheader.vue';
-import navigation from './components/navigation.vue';
-import aboutme from './components/aboutme.vue';
-import aboutmeadd from './components/aboutmeadd.vue';
-import works from './components/works.vue';
-import worksadd from './components/worksadd.vue';
-import comments from './components/comments.vue';
-import commentsadd from './components/commentsadd.vue';
+import adminheader from '../admin/components/adminheader';
+import navigation from '../admin/components/navigation.vue';
+import aboutme from '../admin/components/aboutme.vue';
+import aboutmeadd from '../admin/components/aboutmeadd.vue';
+import works from '../admin/components/works.vue';
+import worksadd from '../admin/components/worksadd.vue';
+import comments from '../admin/components/comments.vue';
+import commentsadd from '../admin/components/commentsadd.vue';
 
 
 export default {
