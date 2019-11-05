@@ -10,7 +10,7 @@ const Parallax = require('parallax-js')
 
 module.exports = (env, argv) => {
   const isProductionBuild = argv.mode === "production";
-  const publicPath = '../dist/';
+  const publicPath = '/{Autumn}/dist/';
 
   const pcss = {
     test: /\.(p|post|)css$/,
