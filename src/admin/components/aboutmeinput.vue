@@ -12,8 +12,10 @@
 </template>
 
 <script>
+
 let uniqId = 0;
 export default {
+    
     data() {
         return {
             aboutme: {

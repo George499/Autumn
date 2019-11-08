@@ -2,7 +2,7 @@
     .aboutme-item
         .skill-name {{aboutme.name}}
         .item-skill__percent
-            .percent 100
+            .percent {{aboutme.percent}}
             .percent__amount %
         .item-skill__icons
             .skill-icon-pen

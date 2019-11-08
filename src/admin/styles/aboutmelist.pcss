@@ -36,6 +36,7 @@ display: flex;
 justify-content: flex-end;
 }
 .aboutme-list__footer__content {
+    position: relative;
     display: flex;
     align-items: center;
     width: 95%;
@@ -138,4 +139,15 @@ width: 40%;
     }
     .skill-name {
         flex: 10;
+    }
+    .error {
+     position: absolute;
+     top: -65px;
+     left: 0;
+     color: firebrick;   
+    }
+    .valid-error::placeholder {
+        
+        color: firebrick;
+        
     }

@@ -1,16 +1,10 @@
 <template lang="pug">
   div
-    adminheader
-    navigation
-    aboutme
-    aboutmeadd    
-    works
-    worksadd    
-    comments
-    commentsadd
+    router-view
 </template>
 
 <script>
+
 import adminheader from './components/adminheader';
 import navigation from './components/navigation.vue';
 import aboutme from './components/aboutme.vue';
@@ -24,14 +18,7 @@ import commentsadd from './components/commentsadd.vue';
 export default {
   name: 'app',
   components: {
-    adminheader,
-    navigation,
-    aboutme,
-    aboutmeadd,
-    works,
-    worksadd,
-    comments,
-    commentsadd
+    
   },
   data() {
     return {
