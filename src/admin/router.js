@@ -3,8 +3,6 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
-import adminheader from './components/adminheader';
-import navigation from './components/navigation.vue';
 import aboutme from './components/aboutme.vue';
 import aboutmeadd from './components/aboutmeadd.vue';
 import works from './components/works.vue';
@@ -15,27 +13,21 @@ import commentsadd from './components/commentsadd.vue';
 const routes = [
     {
     path: '/',
-    components: {
-    adminheader,
-    navigation,
-    aboutme,
-    aboutmeadd,
+    component: {    
+    aboutme
+    
     }
     },
     {
         path: '/works',
-        components: {
-            adminheader,
-            navigation,
+        components: {            
             works,
             worksadd,
         }
     },
     {
         path: '/comments',
-        components: {  
-            adminheader,
-            navigation,          
+        components: {           
             comments,
             commentsadd
         }  

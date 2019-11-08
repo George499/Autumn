@@ -1,5 +1,7 @@
 <template lang="pug">
   div
+    adminheader
+    navigation
     router-view
 </template>
 
@@ -7,18 +9,14 @@
 
 import adminheader from './components/adminheader';
 import navigation from './components/navigation.vue';
-import aboutme from './components/aboutme.vue';
-import aboutmeadd from './components/aboutmeadd.vue';
-import works from './components/works.vue';
-import worksadd from './components/worksadd.vue';
-import comments from './components/comments.vue';
-import commentsadd from './components/commentsadd.vue';
+
 
 
 export default {
   name: 'app',
   components: {
-    
+    adminheader,
+    navigation
   },
   data() {
     return {
