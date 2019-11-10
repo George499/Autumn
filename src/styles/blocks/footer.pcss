@@ -11,6 +11,11 @@
         margin: 0 0 31px;
     }
     }
+    @include phones {
+        height: 100%;
+        
+    }
+    
     
     
 }
@@ -31,6 +36,10 @@
   @include tablets {
        padding-top: 0;  
   }
+  @include phones {
+    flex-direction: column;
+    height: 100%;
+}
 }
 
 .footer__top {
@@ -42,6 +51,9 @@
     }
      @include tablets {
         padding-top: 30px;
+    }
+    @include phones {
+        width: 100%;
     }
 }
 .footer__year {
@@ -58,7 +70,9 @@ margin-right: 60px;
 
 .footer__name {
     width: 141px;
-   
+    @include phones {
+        width: 100%;
+    }
 }
 .footer__my-name {
     margin: 0 0 34px;
@@ -77,6 +91,9 @@ margin-right: 60px;
         @include tablets {
             margin-bottom: 20px;
         }
+    }
+    @include phones {
+        width: 100%;
     }
 }
 .footer__text-socials {
@@ -105,6 +122,9 @@ margin-right: 60px;
     width: 100%;
     @include tablets {
         margin-bottom: 5px;
+    }
+    @include phones {
+        margin-bottom: 15px;
     }
 }
 .footer__quote-author {

@@ -6,6 +6,9 @@
     @include tablets {
         justify-content: center;
     }
+    @include phones {
+        width: 100%
+    }
 }
 .my-works__title {
     color: black;
@@ -40,6 +43,9 @@ margin-right: 20px;
         color: #e6e6e6;
         margin-left: -8px;
         width: 20%;
+        @include phones {
+    display: none
+}
     }
 @include tablets {
     margin-bottom: 60px;
@@ -55,6 +61,9 @@ position: relative;
     width: 620px;
     height: 350px;
 }
+@include phones {
+    height: 100%
+}
 }
 .previews {
     display: flex;
@@ -68,6 +77,9 @@ position: relative;
     max-width: 100%;
     @include desktop {
         bottom: 20px
+    }
+    @include phones {
+        display: none
     }
 }
 .previews__item {
@@ -122,6 +134,11 @@ background-color: #353e4e;
     @include desktop {
         bottom: 20px;
     } 
+    @include phones {
+        right: 0;
+        bottom: 0;
+    } 
+
 }
 .prev-icon {
     fill: white;
@@ -180,6 +197,9 @@ position: absolute;
         text-align: center;
         margin-bottom: 15px;
     }
+    @include phones {
+        text-align: start
+    }
 }
 .iconed-link__text {
     color: #586ed3;
@@ -198,6 +218,7 @@ position: absolute;
 .works__tags {
     display: flex;
     flex-direction: row;
+    
 }
 .works__right {
     padding-left: 125px;
@@ -209,4 +230,11 @@ position: absolute;
     width: 80%;
     align-self: center;
     }
+    @include phones {
+        padding: 0;
+        align-items: flex-start;
+    }
+}
+.works-tags-item {
+    margin-right: 5px
 }

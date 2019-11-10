@@ -12,26 +12,20 @@ import commentsadd from './components/commentsadd.vue';
 
 const routes = [
     {
-    path: '/',
-    component: {    
-    aboutme
-    
-    }
+        path: '/',
+        component: aboutme
+        
     },
     {
         path: '/works',
-        components: {            
-            works,
-            worksadd,
-        }
+        component: works
+        
     },
     {
         path: '/comments',
-        components: {           
-            comments,
-            commentsadd
-        }  
-    }
+        component: comments
+        
+    },
 ];
 
-export default new VueRouter({ routes, mode: 'history' });
+export default new VueRouter({ routes, mode: 'hash' });

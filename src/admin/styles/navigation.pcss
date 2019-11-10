@@ -16,7 +16,7 @@ width: 100%;
     
 }
 .admin-nav-list__item {
-    
+    position: relative;
     cursor: pointer;
     height: 100%;
     display: flex;
@@ -32,15 +32,14 @@ width: 100%;
         font-weight: bold;
         color: #383bcf;
         border-bottom: 3px solid #383bcf;
-        // &:before {
-        // content: "";
-        // position: absolute;
-        // height: 3px;
-        // width: 110px;
-        // border-bottom: 2px solid #383bcf;
-        // margin-left: -22px;
-        // bottom: 0;
-        //     }
+        
     }
-    
+
 }
+    .nav__link {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: transparent;
+    }

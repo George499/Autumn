@@ -69,7 +69,29 @@ new Vue({
                   },
                   loop: false,
                   slidesPerView: 2,
-                  slidesPerGroup: 2
+                  slidesPerGroup: 2,
+                  spaceBetween: 50,
+                  centerInsufficientSlides: true,
+                  
+                  breakpoints: {
+                    
+                    480: {
+                      slidesPerView: 1,
+                      slidesPerGroup: 1,
+                      spaceBetween: 100
+                      
+                    },
+                    
+                    1200: {
+                      slidesPerView: 2,
+                      spaceBetween: 30
+                    },
+                    
+                    780: {
+                      slidesPerView: 2,
+                      spaceBetween: 10
+                    }
+                  }
             }
         };
     }, 

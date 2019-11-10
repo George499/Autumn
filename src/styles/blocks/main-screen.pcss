@@ -129,10 +129,11 @@
     &:hover {
       fill: #ff9a00;
     }
-    @include desktop {
+    @include tablets {
     fill: rgba(#fff, .7);
     
     }
+    
   }
   .social-contacts {
       display: flex;
@@ -141,13 +142,20 @@
         @include tablets {
           padding-left: 244px;
         }
+        @include phones {
+        display: none;
+    }
       }
       &--footer {
       @include tablets {
         padding-left: 0
       }
+      @include phones {
+        display: flex;
+        margin-bottom: 20px
+      }
     }
-
+    
   }
   .navigation__item {
     margin-right: 60px;
@@ -165,6 +173,10 @@
       text-align: start;
       line-height: 60px;
       color: rgba(#fff, 0.9);
+      @include phones {
+      text-align: center;
+      padding: 0
+    }
       
   }
   .desc-text {

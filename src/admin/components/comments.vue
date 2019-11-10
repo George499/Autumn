@@ -35,20 +35,26 @@
                                     ).comments-textarea
                                 .comments-input__buttons
                                     button.load-cancel Отмена
-                                    button.load-image.load-image--save Сохранить    
-
-    
-    
-
-
-
-
-
-
-
-
-
+                                    button.load-image.load-image--save Сохранить 
+        commentsadd
 </template>
+
+<script>
+import commentsadd from './commentsadd.vue';
+
+export default {
+  name: 'app',
+  components: {
+    commentsadd
+    
+  },
+  data() {
+    return {
+      msg: ''
+    }
+  }
+}
+</script>
 
 <style lang='pcss' scoped src='../styles/comments.pcss'>
 

@@ -16,7 +16,8 @@ export default {
   name: 'app',
   components: {
     adminheader,
-    navigation
+    navigation,
+    
   },
   data() {
     return {

@@ -1,9 +1,13 @@
 .reviews {
     margin-bottom: 202px;
+    
     @include tablets {
         margin-bottom: 0;
         height: 50%;
     }
+    @include phones {
+        margin-bottom: 150px;
+    } 
 }
 .reviews__scroll {
 height: 50px;
@@ -30,8 +34,8 @@ margin-right: 31px;
 
 .review__slide {
     height: 210px;
-    width: 50%;
-    padding-left: 50px;
+    
+    
     &:last-child {
         margin-right: 0;
     }
@@ -51,15 +55,17 @@ margin-right: 31px;
     font-weight: 600
 }
 .review__pic {
-height: 75px;
+
 width: 75px;
-border-radius: 75px
+border-radius: 50%
 }
 .reviews__title {
     display: flex;
     flex-direction: row;
     width: max-content;
-    
+    @include phones {
+        flex-direction: column;
+    }
 }
 .slide__top {
     display: flex;
@@ -74,7 +80,8 @@ align-items: center;
 }
 .reviews__block {
     align-self: baseline;
-    width: 60%;
+    
+    
 }
 .slide__img {
     margin-right: 31px;
@@ -84,12 +91,15 @@ align-items: center;
     }
 }
 .reviews__slider {
-    width: 100%;
+    
     display: flex;
     flex-direction: row;
     color: rgba(255, 255, 255, .7);
-    margin: 0;
+    margin-left: 0;
 
+}
+.reviews-content {
+    width: 840px;
 }
 .reviewer__name {
     font-size: 18px;

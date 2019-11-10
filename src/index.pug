@@ -109,7 +109,7 @@ html(lang="en")
                | LoftSchool. Чуть позже я освежу в нём свой контент. А пока
                br
                | посмотрите, как тут всё классно и красиво!
-          #skills-component
+            #skills-component
         section.my-works
           .container.my-works__container
             h1.my-works__title Мои работы
@@ -121,39 +121,40 @@ html(lang="en")
                 .reviews__title
                   h1.form__title Что обо мне говорят
                   .reviews__scrolls
-                  button.reviews__scroll.reviews__scroll--left(slot="button-prev")
-                  button.reviews__scroll.reviews__scroll--right(slot="button-next")
-                swiper.reviews__slider(:options="swiperOptions" ref="mySwiper" id="reviews__slider")
-                  swiper-slide.review__slide
-                    .slide__top
-                      +icon("quote", "quote__icon")
-                      p.quote__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-                    .slide__bottom 
-                      .slide__img 
-                        +image('content/user.jpg', 'review__pic')
-                      .slide__name
-                        h1.reviewer__name Ковальчук Дмитрий
-                        .reviewer__position Основатель Loftschool 
-                  swiper-slide.review__slide
-                    .slide__top
-                      +icon("quote", "quote__icon")
-                      p.quote__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
-                    .slide__bottom 
-                      .slide__img 
-                        +image('content/user.jpg', 'review__pic')
-                      .slide__name
-                        h1.reviewer__name Владимир Сабанцев
-                        .reviewer__position Преподаватель 
-                  swiper-slide.review__slide
-                    .slide__top
-                      +icon("quote", "quote__icon")
-                      p.quote__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
-                    .slide__bottom 
-                      .slide__img 
-                        +image('content/user.jpg', 'review__pic')
-                      .slide__name
-                        h1.reviewer__name Владимир Сабанцев
-                        .reviewer__position Преподаватель 
+                    button.reviews__scroll.reviews__scroll--left(slot="button-prev")
+                    button.reviews__scroll.reviews__scroll--right(slot="button-next")
+                .reviews-content
+                  swiper.reviews__slider(:options="swiperOptions" ref="mySwiper" id="reviews__slider")
+                    swiper-slide.review__slide
+                      .slide__top
+                        +icon("quote", "quote__icon")
+                        p.quote__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                      .slide__bottom 
+                        .slide__img 
+                          +image('content/user.jpg', 'review__pic')
+                        .slide__name
+                          h1.reviewer__name Ковальчук Дмитрий
+                          .reviewer__position Основатель Loftschool 
+                    swiper-slide.review__slide
+                      .slide__top
+                        +icon("quote", "quote__icon")
+                        p.quote__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+                      .slide__bottom 
+                        .slide__img 
+                          +image('content/user.jpg', 'review__pic')
+                        .slide__name
+                          h1.reviewer__name Владимир Сабанцев
+                          .reviewer__position Преподаватель 
+                    swiper-slide.review__slide
+                      .slide__top
+                        +icon("quote", "quote__icon")
+                        p.quote__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+                      .slide__bottom 
+                        .slide__img 
+                          +image('content/user.jpg', 'review__pic')
+                        .slide__name
+                          h1.reviewer__name Владимир Сабанцев
+                          .reviewer__position Преподаватель 
             section.form            
               .form__block
                 h1.form__title.form__title--bottom Связаться со мной

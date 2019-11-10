@@ -6,6 +6,9 @@
     @include tablets {
          height: 100vh;
     }
+    @include phones {
+        height: 100%;
+    } 
     
 }
 .form {
@@ -66,6 +69,10 @@
 .form__row {
     display: flex;
     margin-bottom: 41px;
+    @include phones {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
 }
 .form__block {
     align-self: baseline;
@@ -80,13 +87,20 @@
     @include tablets {
         width: 100%;
     }
+    @include phones {
+        margin-bottom: 30px;
+    } 
 
 }
 .form__block-title {
     color: rgba(255, 255, 255, .3);
     padding-left: 46px;
     font-weight: 600;
+    @include phones {
+        margin-bottom: 17px;
+    } 
 }
+
 .send-button {
     height: 70px;
     width: 40%;
@@ -106,8 +120,9 @@
 .feedback__container {
     display: flex;
     height: 100%;
+    
     @include tablets {
-        width: 760px;
+        width: 95%
     }
     
 }
@@ -116,6 +131,10 @@
     margin-bottom: 101px;
     @include tablets {
         margin-bottom: 61px;
+    }
+    @include phones {
+        margin: 0 auto;
+        margin-bottom: 33px;
     }
 }
 .form__title {

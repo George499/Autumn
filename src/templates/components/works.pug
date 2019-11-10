@@ -20,6 +20,7 @@ script(type="text/x-template")#slider-display
             :current-work="currentWork"
             @preview="$emit('preview', $event)"
             )
+                .slider__preview
             btns(
                 @slide="$emit('slide', $event)"
             )
@@ -55,6 +56,7 @@ script(type="text/x-template")#slider-info
             p.works__text {{currentWork.desc}}
         a.iconed-link
             a(:href="currentWork.link").iconed-link__icon
+                +icon('link', 'icon-link-svg')
             .iconed-link__text Посмотреть сайт
 
 script(type="text/x-template")#slider-tags

@@ -1,74 +1,85 @@
 .skills {
     height: 100vh;
     background: url(../images/content/Фон3.jpg) center / cover no-repeat;    
-    
     justify-content: center;    
     position: relative;
     background-blend-mode: multiply;
-    
+    @include phones {
+      height: 100%;
+    }
 }
 .hands-pic {
     position: absolute;
     top: 280px;
     width: 30%;  
     
-    @include desktop {
+    @include tablets {
         width: 393px;
         height: 653px;
         bottom: -60px;
         top: inherit;
-    }
-    @include desktop {
         bottom: -130px;
         left: 25%;
         transform: rotate(-90deg);
     }
 }
 .user__skills {
-    display: flex;
-    margin-left: 40%;
+    display: flex;    
     height: 60%;
     flex-direction: column;
-    @include desktop {
+    @include tablets {
       margin: 0 auto;
       align-items: center;
-    }
-    @include tablets {
-        align-items: center;
-        
     }
 }
 
 .skills__container {
+  height: 100%;
     align-items: baseline;
     padding-left: 30%;
-    height: 40%;
     width: 100%;
+    display: flex;
+    align-items: flex-end;
+    @include tablets {
+      padding-left: 0;
+    }
     h1 {
+      align-self: flex-start;
     font-size: 30px;
     text-align: left;
+    text-align: center;
     @include tablets {
         width: 40%;
+        align-self: center;
+    }
+    @include phones {
+      width: 100%;                
+      
     }
     }
     p {
+      align-self: flex-start;
+    margin-bottom: 0;
     font-weight: 600;
     line-height: 30px;
-    @include desktop {        
+    @include tablets {
         text-align: center;
-    }
-    }
-    @include desktop {
-        padding-left: 20%;
-    }
-    @include desktop {
+        align-self: center;
         padding-left: 0;
         align-items: center;
         justify-content: center;
-    }
-    @include tablets {
-        height: 30%;
-    }
+    };
+    @include phones {
+      width: 100%;
+      padding-left: 0;
+      text-align: start;
+      margin-bottom: 0;
+  };
+}
+@include phones {
+  padding-left: 0;
+  width: 95%;
+}
 }
 .user-skills__item {
     display: flex;
@@ -87,6 +98,9 @@
     @include tablets {
         padding-right: 0;
         margin-bottom: 60px;
+    }
+    @include phones {
+      flex-wrap: wrap;
     }
 }
 .skill__circle {
@@ -158,4 +172,14 @@
   
   .skills__item {
     margin-bottom: 30px;
+  }
+  .values__widget-container {
+    padding-left: 90px;
+    @include tablets {
+      padding-left: 0;
+      align-self: center
+    }
+    @include phones {
+      padding: 0;
+    }
   }
