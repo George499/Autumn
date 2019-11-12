@@ -1,16 +1,18 @@
+@import "../../styles/mixins.pcss";
 .aboutme-list {
     
     height: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    margin-bottom: 75px;
 }
 .aboutme-content__list {
   
 font-size: 16px;
 font-weight: 600;
 color: rgba(#414c63, .5);
-padding-left: 30px;
+
 border: none;
 outline: none;
 display: flex;
@@ -27,13 +29,16 @@ flex-direction: column;
 }
 .aboutme-list__footer {
 color: rgba(#414c63, .7);
-padding: 30px 30px 30px 30px;
+
 border: none;
 outline: none;
 bottom: 34px;
 right: 31px;
 display: flex;
 justify-content: flex-end;
+@include tablets {
+    justify-content: space-around;
+}
 }
 .aboutme-list__footer__content {
     position: relative;
@@ -41,17 +46,20 @@ justify-content: flex-end;
     align-items: center;
     width: 95%;
     justify-content: flex-end;
-    
-    
+    @include tablets {
+        justify-content: space-around;
+    }
     
 }
 .new-skill {
+    width: 100%;
     flex: 3;
     border: none;
     outline: none;
     
 }
 .skill-percent {
+    width: 100%;
     flex: 1;
     border: none;
     outline: none;  
@@ -64,11 +72,13 @@ width: 40%;
     content: "";
     bottom: -10px;
     left: -10px;
-    
     position: absolute;
     background:  black;
     height: 1px;
     width: 80%;
+    @include tablets {
+        left: 0;
+    }
 }
 }
 .skill-percent__input{
@@ -142,9 +152,10 @@ width: 40%;
     }
     .error {
      position: absolute;
-     top: -65px;
+     top: 40px;
      left: 0;
-     color: firebrick;   
+     color: firebrick;
+     
     }
     .valid-error::placeholder {
         color: firebrick;

@@ -60,7 +60,27 @@
                                 .works-input__buttons
                                     button.load-cancel Отмена
                                     button.load-image.load-image--save Сохранить
+        worksadd
+
 </template>
+
+<script>
+import worksadd from './worksadd.vue';
+
+export default {
+  name: 'app',
+  components: {
+    worksadd
+    
+  },
+  data() {
+    return {
+      msg: ''
+    }
+  }
+}
+</script>
+
 <style lang='pcss' scoped src='../styles/works.pcss'>
 
 </style>

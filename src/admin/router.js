@@ -8,7 +8,7 @@ import aboutmeadd from './components/aboutmeadd.vue';
 import works from './components/works.vue';
 import worksadd from './components/worksadd.vue';
 import comments from './components/comments.vue';
-import commentsadd from './components/commentsadd.vue';
+
 
 const routes = [
     {

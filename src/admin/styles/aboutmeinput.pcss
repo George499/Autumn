@@ -1,4 +1,4 @@
-
+@import "../../styles/mixins.pcss";
 button{
         
     border: none;
@@ -8,7 +8,8 @@ button{
     font-size: 18px;
     font-weight: 600;
     color: #414c63;
-    padding: 30px 30px 30px 30px;
+    margin-right: 30px;
+    padding-bottom: 30px;
     border: none;
     outline: none;
     width: 50%;
@@ -23,14 +24,18 @@ button{
         &:after {        
             content: "";
             bottom: 15px;
-            left: 35px;        
             position: absolute;
             background:  rgba(black, .4);
             height: 2px;
             width: 40%;
+            @include tablets{
+                content: none; 
+                
         }
-    }
-    
+            
+        }
+        
+}
     .aboutme-input {
         padding-left: 5px;        
         align-items: center;
@@ -42,7 +47,7 @@ button{
            bottom: 0;
            background: rgba(#1f232d, .1);
            width: 93%;
-           margin-left: 20px;
+           
 
        }
     }

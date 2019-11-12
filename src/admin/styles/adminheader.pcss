@@ -1,3 +1,5 @@
+@import "../../styles/mixins.pcss";
+
 h1 {
     color: #fff;   
     margin: 0;
@@ -7,7 +9,20 @@ h1 {
   h2 {
       margin: 0;
       font-size: 14px;
-      color: rgba(#fff, .5)
+      color: rgba(#fff, .5);
+      @include phones {
+          display: none;
+      }
+  }
+  .adminheader-text {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      
+      @include phones {
+          flex-direction: column;
+          align-items: flex-start;
+      }
   }
   .adminheader {
       width: 100%;
@@ -24,11 +39,14 @@ h1 {
     margin-right: 20px;
     }
     .admin-exit {
-        justify-self: flex-end;
+        
         margin-left: auto;
         text-decoration: underline;
         line-height: 24px;
         border-bottom: 1px;
         color: rgba(#fff, .7);
+        @include phones {
+            margin: 0;
+        }
     }
   

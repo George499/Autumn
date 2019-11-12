@@ -54,6 +54,9 @@ body {
       position: relative;  
       align-items: center;
       height: 100%;
+      @include phones {
+        width: 100%;
+      }
   
   }
   h1 {

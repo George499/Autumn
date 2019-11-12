@@ -1,3 +1,4 @@
+@import "../../styles/mixins.pcss";
 .comments-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
@@ -5,6 +6,17 @@
     grid-gap: 30px 30px;
     width: 100%;
     padding-top: 30px;
+    @include tablets {
+       grid-template-columns: 1fr 1fr;
+       grid-template-rows: 556px 556px 556px;
+    }
+    @include phones {
+        @include phones {
+            grid-template-columns: 1fr; 
+            grid-template-rows: auto; 
+              
+          }
+    }
     
 }
 .comments-item {
@@ -21,6 +33,13 @@
     &--add {
         background: linear-gradient(90deg, #006aed 0%, #3f35cb 100%);
         justify-content: center;
+        @include phones {
+      
+            flex-direction: row;
+            justify-content: flex-start;
+            
+            padding: 30px 20px;
+          }
     }
     &--chosen {
         filter: opacity(.4);
@@ -39,13 +58,20 @@ cursor: pointer;
     content: "+";
     font-size: 72px;
     font-weight: 300;
-    
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+     @include phones {
+        font-size: 24px;
+        }
 }
+@include phones {
+    margin: 0;
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
+  }
 }
 
 .comments-item__button {
@@ -76,7 +102,9 @@ margin-right: 11px;
     height: 20%;
     border-bottom: 1px solid rgba(#1f232d, .5);
     align-items: flex-start;
-
+@include phones {
+    padding-bottom: 30px;
+}
 }
 .rev-avatar-img {
  height: 50px;
@@ -100,6 +128,7 @@ color: #414c63;
 .comments-text {
     color: #414c63;
     font-weight: 600;
+    margin-bottom: 36px;
 }
 .comments-item__buttons {
     display: flex;

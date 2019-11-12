@@ -1,7 +1,12 @@
+@import "../../styles/mixins.pcss";
 .title {
     margin: 0;
     margin-right: 60px;
     font-size: 21px;
+    @include phones {
+        margin-left: -21px;
+        margin-right: 0;
+    }
 }
 .about-me-top {
     display: flex;
@@ -10,6 +15,10 @@
     font-weight: bold;
     margin-top: 60px;
     margin-bottom: 60px;
+@include phones {
+    flex-direction: column;
+    padding-left: 20px;
+}
 }
 .add-group {
     display: flex;

@@ -1,3 +1,4 @@
+@import "../../styles/mixins.pcss";
 .works-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
@@ -5,6 +6,14 @@
     grid-gap: 30px 30px;
     width: 100%;
     padding-top: 30px;
+    @include tablets {
+    grid-template-columns: 1fr 1fr ;
+    }
+    @include phones {
+      grid-template-columns: 1fr; 
+      grid-template-rows: auto; 
+        
+    }
     
 }
 .work-item {
@@ -16,9 +25,18 @@
     flex-direction: column;
     align-items: center;
     display: flex;
+    height: 100%;
     &--add {
         background: linear-gradient(90deg, #006aed 0%, #3f35cb 100%);
         justify-content: center;
+
+        @include phones {
+      
+      flex-direction: row;
+      justify-content: flex-start;
+      
+      padding: 30px 20px;
+    }
     }
     &--chosen {
         filter: opacity(.4);
@@ -30,7 +48,7 @@ height: 150px;
 width: 150px;
 position: relative;
 border: 2px solid #ffffff;
-border-radius: 150px;
+border-radius: 50%;
 margin-bottom: 30px;
 cursor: pointer;
 &:before {
@@ -42,8 +60,18 @@ cursor: pointer;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    @include phones {
+        
+        font-size: 24px;
+      }
     
 }
+@include phones {
+    margin: 0;
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
+  }
 }
 .work-add-text {
     font-size: 18px;
@@ -51,6 +79,9 @@ cursor: pointer;
     color: #ffffff;
     text-align: center;
     width: 30%;
+    @include phones {
+        width: 50%;
+    }
 }
 .work-item__desc {
 padding: 0 30px;
