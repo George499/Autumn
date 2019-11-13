@@ -3,6 +3,7 @@
         .aboutme-input-wrap
             input(
                 type="text"
+                v-model="title"
                 placeholder="Название новой группы"
                 autofocus
             ).input
