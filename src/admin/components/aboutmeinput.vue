@@ -5,18 +5,22 @@
                 type="text"
                 placeholder="Название новой группы"
                 autofocus
+               v-model="title"
             ).input
             .buttons
-                button.tick(type='button')
+                button.tick(type='button' @submit.prevent="addNewCategory")
                 button.cross(type='button')
+            
 </template>
 
 <script>
+import { mapActions } from "vuex";
 
 let uniqId = 0;
 export default {
     
-    data() {
+    data ()  {
+        title: "";
         return {
             aboutme: {
                 id: 0,
@@ -26,7 +30,12 @@ export default {
         }
     },
     methods: {
+        ...mapActions("categories", ["addCategory"]),
+        addNewCategory() {
+            this.addCategory(this.title)
+            },
         addAboutme() {
+            
             uniqId++;
             this.aboutme.id = uniqId;
             this.$emit("addAboutme", {...this.aboutme});
